@@ -1,4 +1,4 @@
-![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/Unicore.png)
+![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
 
 [![Build Status](https://travis-ci.org/MaximBazarov/Unicore.svg?branch=master)](https://travis-ci.org/MaximBazarov/Unicore)
 [![Version](https://img.shields.io/cocoapods/v/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
