@@ -1,8 +1,7 @@
 import Foundation
 import FunctionalFoundation
 
-/// Store is a single mutation point of our app state.
-/// Store is a natural dispathcer
+
 public
 final class Core<State> {
     public
@@ -11,9 +10,8 @@ final class Core<State> {
         self.mutate = mutate
     }
     
-    /// Dispatch is async by nature.
     public
-    func dispatch(action: Action) {
+    func dispatch(_ action: Action) {
         queue.async {
             self.listeners.forEach { $0.execute(with: (self.state, action)) }
             self.state = self.mutate(self.state, action)
@@ -38,7 +36,6 @@ final class Core<State> {
             observeCommand.execute(with: self.state)
         }
         
-        // Cancel observing should not keep link to command, so we need to use `weak` here
         let stopObservation = PlainCommand(id: "Stop observing with  \(observer)") { [weak observeCommand] in
             guard let observeCommand = observeCommand else { return }
             self.observers.remove(observeCommand)

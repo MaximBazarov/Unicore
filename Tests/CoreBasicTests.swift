@@ -41,7 +41,7 @@ class UnicoreTests: XCTestCase {
 
         sut.observe { (value) in
             result.append(value)
-            if sequence.count > 0 { sut.dispatch(action: Fake.action) }
+            if sequence.count > 0 { sut.dispatch(Fake.action) }
         }
         
         XCTAssertEqual(result, expectedStateSequence)
@@ -83,7 +83,7 @@ class UnicoreTests: XCTestCase {
             
         }
         
-        sut.dispatch(action: Fake.action)
+        sut.dispatch(Fake.action)
         
         wait(for: [exp], timeout: 0.5)
     }
