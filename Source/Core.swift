@@ -12,7 +12,7 @@ final class Core<State> {
     
     public
     func dispatch(_ action: Action) {
-        queue.async {
+        coreDispatchQueue.async {
             self.listeners.forEach { $0.execute(with: (self.state, action)) }
             self.state = self.mutate(self.state, action)
             self.observers.forEach { $0.execute(with: self.state) }
@@ -29,9 +29,15 @@ final class Core<State> {
     ///
     /// - Returns: `PlainCommand` to stop observation
     @discardableResult public
-    func observe(with observer: @escaping (State) -> Void ) -> PlainCommand {
-        let observeCommand = Command(action: observer)
-        queue.async {
+    func observe(on queue:DispatchQueue? = nil, with observer: @escaping (State) -> Void ) -> PlainCommand {
+        var observeCommand: Command<State>
+        if let queue = queue {
+            observeCommand = Command(action: observer).async(on: queue)
+        } else {
+            observeCommand = Command(action: observer)
+        }
+
+        coreDispatchQueue.async {
             self.observers.insert(observeCommand)
             observeCommand.execute(with: self.state)
         }
@@ -39,7 +45,7 @@ final class Core<State> {
         let stopObservation = PlainCommand(id: "Stop observing with  \(observer)") { [weak observeCommand] in
             guard let observeCommand = observeCommand else { return }
             self.observers.remove(observeCommand)
-        }.async(on: queue)
+        }.async(on: coreDispatchQueue)
         
         return stopObservation
     }
@@ -53,20 +59,20 @@ final class Core<State> {
     func listen(with listener: @escaping (State, Action) -> Void ) -> PlainCommand {
         let listenerCommand = Command(action: listener)
         
-        queue.async {
+        coreDispatchQueue.async {
             self.listeners.insert(listenerCommand)
         }
         
         let stopObservation = PlainCommand(id: "Stop observing with \(listener)") { [weak listenerCommand] in
             guard let listenerCommand = listenerCommand else { return }
             self.listeners.remove(listenerCommand)
-        }.async(on: queue)
+        }.async(on: coreDispatchQueue)
         
         return stopObservation
     }
     
     // MARK: - Private -
-    private let queue = DispatchQueue(label: "store private queue")
+    private let coreDispatchQueue = DispatchQueue(label: "store private queue")
     private var state: State
     private var mutate: Mutator<State>
     
