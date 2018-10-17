@@ -1,6 +1,4 @@
 import Foundation
-import FunctionalFoundation
-
 
 public
 final class Core<State> {
