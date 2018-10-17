@@ -24,6 +24,14 @@
 		FE5668F62177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F72177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F82177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
+		FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
+		FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
+		FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
+		FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
+		FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
+		FE56690021770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
+		FE56690121770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
+		FE56690221770F330055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
 		FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED3CF5820D0477E00AB04C8 /* Unicore.framework */; };
 		FEAD14DD20D04F1300BBBD88 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FEAD14DE20D04FCB00BBBD88 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2305FE20CFF8A1000E4355 /* Action.swift */; };
@@ -72,6 +80,8 @@
 		FE23060020CFF8A1000E4355 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		FE23060D20CFF9A7000E4355 /* Mutator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutator.swift; sourceTree = "<group>"; };
 		FE5668F42177098E0055DEF1 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		FE5668F921770D150055DEF1 /* Disposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
+		FE5668FB21770ED70055DEF1 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED3CF5820D0477E00AB04C8 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0831620E8F29E004EC22C /* Unicore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unicore.podspec; sourceTree = SOURCE_ROOT; };
@@ -173,9 +183,11 @@
 			isa = PBXGroup;
 			children = (
 				FE5668F42177098E0055DEF1 /* Command.swift */,
+				FE5668F921770D150055DEF1 /* Disposer.swift */,
 				FE2305FE20CFF8A1000E4355 /* Action.swift */,
 				FE23060020CFF8A1000E4355 /* Core.swift */,
 				FE23060D20CFF9A7000E4355 /* Mutator.swift */,
+				FE5668FB21770ED70055DEF1 /* Dispatcher.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -475,8 +487,10 @@
 			files = (
 				FE23060920CFF8A1000E4355 /* Core.swift in Sources */,
 				FE23060E20CFF9A7000E4355 /* Mutator.swift in Sources */,
+				FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */,
 				FE23060120CFF8A1000E4355 /* Action.swift in Sources */,
 				FE5668F52177098F0055DEF1 /* Command.swift in Sources */,
+				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +510,8 @@
 				FE23061020CFF9A7000E4355 /* Mutator.swift in Sources */,
 				FE23060320CFF8A1000E4355 /* Action.swift in Sources */,
 				FE5668F62177098F0055DEF1 /* Command.swift in Sources */,
+				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
+				FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +523,8 @@
 				FE23061120CFF9A7000E4355 /* Mutator.swift in Sources */,
 				FE23060420CFF8A1000E4355 /* Action.swift in Sources */,
 				FE5668F72177098F0055DEF1 /* Command.swift in Sources */,
+				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
+				FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +552,8 @@
 				FEAD14DE20D04FCB00BBBD88 /* Action.swift in Sources */,
 				FEAD14E020D04FD000BBBD88 /* Mutator.swift in Sources */,
 				FE5668F82177098F0055DEF1 /* Command.swift in Sources */,
+				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
+				FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
