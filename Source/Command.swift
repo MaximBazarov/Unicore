@@ -25,10 +25,11 @@
 
 import Foundation
 
+
 public
-final class Command<T> {
+class Command<T> {
     
-    private let action: (T) -> () // underlying closure
+    let action: (T) -> () // underlying closure
     
     // Block of `context` defined variables. Allows Command to be debugged
     private let file: StaticString
@@ -131,5 +132,4 @@ extension Command {
         }
     }
 }
-
 

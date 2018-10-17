@@ -10,6 +10,7 @@ import XCTest
 
 class UnicoreTests: XCTestCase {
     
+    let disposer = Disposer()
     
     // MARK: Components
     
@@ -19,7 +20,7 @@ class UnicoreTests: XCTestCase {
         let sut = Core<Int>(state: state) { _, _ in state }
         sut.observe { value in
             if value == state { exp.fulfill() }
-        }
+        }.dispose(on: disposer)
         wait(for: [exp], timeout: 0.1)
     }
     
@@ -41,7 +42,7 @@ class UnicoreTests: XCTestCase {
         sut.observe { (value) in
             result.append(value)
             if sequence.count > 0 { sut.dispatch(Fake.action) }
-        }
+        }.dispose(on: disposer)
         
         XCTAssertEqual(result, expectedStateSequence)
     }
@@ -53,7 +54,7 @@ class UnicoreTests: XCTestCase {
         let sut = Core<Int>(state: state) { _, _ in state }
         sut.listen { (_, _) in
             XCTFail()
-        }
+        }.dispose(on: disposer)
     }
     
     func testMiddlewareSubscribed_StateHasChanged_MiddlewareRecevesStateBeforeChangesAndAction() {
@@ -80,7 +81,7 @@ class UnicoreTests: XCTestCase {
                 XCTFail()
             }
             
-        }
+        }.dispose(on: disposer)
         
         sut.dispatch(Fake.action)
         
