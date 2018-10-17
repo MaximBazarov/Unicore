@@ -12,6 +12,9 @@ final class Core<State> : Dispatcher {
     private var observers:  Set<Command<State>> = []
     
     public
+    typealias DisposeCommand = PlainCommand
+    
+    public
     init(state: State, mutate: @escaping Mutator<State>) {
         self.state = state
         self.mutate = mutate
