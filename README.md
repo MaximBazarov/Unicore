@@ -1,6 +1,6 @@
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" width="50" height="50"> The Unicore—a unidirectional data flow
 ======================================
- 
+
 
 ![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
 
@@ -10,6 +10,8 @@
 [![License](https://img.shields.io/cocoapods/l/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 [![Platform](https://img.shields.io/cocoapods/p/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 
+# Version 1.0
+  [ ] checklist
 ## Example
 
 Coming....
