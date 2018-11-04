@@ -30,12 +30,12 @@ class UnicoreTests: XCTestCase {
         
         var sequence = Array(expectedStateSequence.reversed())
         
-        func mutate(_ state: Int, _ action: Action) -> Int {
+        func reduce(_ state: Int, _ action: Action) -> Int {
             return sequence.popLast()!
         }
         
         var result:[Int] = []
-        let sut = Core<Int>(state: sequence.popLast()!, reducer: mutate)
+        let sut = Core<Int>(state: sequence.popLast()!, reducer: reduce)
 
         sut.observe { (value) in
             result.append(value)
@@ -64,11 +64,11 @@ class UnicoreTests: XCTestCase {
         
         var sequence = Array(expectedStateSequence.reversed())
         
-        func mutate(_ state: Int, _ action: Action) -> Int {
+        func reduce(_ state: Int, _ action: Action) -> Int {
             return sequence.popLast()!
         }
         
-        let sut = Core<Int>(state: sequence.popLast()!, reducer: mutate)
+        let sut = Core<Int>(state: sequence.popLast()!, reducer: reduce)
         
         sut.add { value, action in
             if value == firstValue, action is FakeAction {
