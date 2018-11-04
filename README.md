@@ -57,7 +57,7 @@ pod 'Unicore'
 
 [Maxim Bazarov](https://github.com/MaximBazarov):  Maintainer of the framework, and evangelist of this approach.
 
-[Alexey Demedetskiy](https://github.com/AlexeyDemedetskiy): Autor of the first version and many examples.
+[Alexey Demedetskiy](https://github.com/AlexeyDemedetskiy): Author of the first version and number of examples.
 
 [Redux JS](https://redux.js.org/): original idea.
 
