@@ -1,4 +1,4 @@
-<img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="40"> The Unicore—a unidirectional data flow
+<img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore—a unidirectional data flow
 ======================================
 
 
