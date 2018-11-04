@@ -1,19 +1,27 @@
-<img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
-======================================
 
-![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
-
-======================================
 [![Build Status](https://travis-ci.org/Unicore/Unicore.svg?branch=master)](https://travis-ci.org/Unicore/Unicore)
 [![Version](https://img.shields.io/cocoapods/v/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 [![License](https://img.shields.io/cocoapods/l/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 [![Platform](https://img.shields.io/cocoapods/p/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 
-# Version 1.0
-  [ ] checklist
-## Example
+<img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
+======================================
+is an application design approach which lets you: 
+- decrease code coupling be removing external dependencies.
+- increase testability by using mostly pure functions.
+- increase maintainability by providing a high level of the code parts isolation.
 
-Coming....
+It is a convenient combination of the data-driven and redux.js ideas. 
+
+- [The Unicore](#the-unicore)
+  - [App State](#app-state)
+  - [Core](#core)  
+  - [Actions](#actions)
+  - [Reducer](#reducer)
+- [Installation](#installation)
+- [Usage](https://github.com/Unicore/TheMovieDB)
+- [Credits](#credits)
+- [License](#license)
 
 ## Requirements
 
@@ -21,6 +29,19 @@ Coming....
 * macOS: 10.10 +
 * watchOS 2.0 +
 * tvOS: 9.0 +
+
+## The Unicore
+
+## App State
+
+## Core
+
+## Actions
+
+## Reducer
+
+
+![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
 
 
 ## Installation
@@ -32,15 +53,15 @@ it, simply add the following line to your Podfile:
 pod 'Unicore'
 ```
 
-## Author
-
-Maxim Bazarov
-
 ## Credits
 
+[Maxim Bazarov](https://github.com/MaximBazarov):  Maintainer of the framework, and evangelist of this approach.
 
-[Alexey Demedetskiy](https://github.com/AlexeyDemedetskiy),
-[Redux JS](https://redux.js.org/)
+[Alexey Demedetskiy](https://github.com/AlexeyDemedetskiy): Autor of the first version and many examples.
+
+[Redux JS](https://redux.js.org/): original idea.
+
+
 
 ## License
 
