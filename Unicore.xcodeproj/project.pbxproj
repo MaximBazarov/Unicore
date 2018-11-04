@@ -186,11 +186,11 @@
 		FE2305F620CFF289000E4355 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				FE23060020CFF8A1000E4355 /* Core.swift */,
+				FE2305FE20CFF8A1000E4355 /* Action.swift */,
+				FE23060D20CFF9A7000E4355 /* Mutator.swift */,
 				FE5668F42177098E0055DEF1 /* Command.swift */,
 				FE5668F921770D150055DEF1 /* Disposer.swift */,
-				FE2305FE20CFF8A1000E4355 /* Action.swift */,
-				FE23060020CFF8A1000E4355 /* Core.swift */,
-				FE23060D20CFF9A7000E4355 /* Mutator.swift */,
 				FE5668FB21770ED70055DEF1 /* Dispatcher.swift */,
 			);
 			path = Source;

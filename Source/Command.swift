@@ -62,14 +62,21 @@ class Command<T> {
     @objc
     public
     func debugQuickLookObject() -> AnyObject? {
-        return """
-            type: \(String(describing: type(of: self)))
-            id: \(id)
-            file: \(file)
-            function: \(function)
-            line: \(line)
-            """ as NSString
+       return debugDescription as NSString
     }
+}
+
+extension Command: CustomDebugStringConvertible {
+    
+    public var debugDescription: String {
+        return """
+            \(String(describing: type(of: self))) id: \(id)
+            \tfile: \(file)
+            \tfunction: \(function)
+            \tline: \(line)
+            """
+    }
+
 }
 
 

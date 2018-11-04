@@ -24,4 +24,4 @@
 
 
 /// Marker protocol to keep actions list open
-public protocol Action {}
+public protocol Action: Codable {}

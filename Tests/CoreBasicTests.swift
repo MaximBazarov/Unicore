@@ -11,6 +11,7 @@ import XCTest
 class UnicoreTests: XCTestCase {
     
     let disposer = Disposer()
+    struct FakeAction: Action {}
     
     // MARK: Components
     
@@ -25,9 +26,6 @@ class UnicoreTests: XCTestCase {
     }
     
     func testComponentSubscribed_StateHasChanged_ComponentRecevesAllStateChanges() {
-        
-        enum Fake: Action { case action }
-        
         let expectedStateSequence = [7, 2]
         
         var sequence = Array(expectedStateSequence.reversed())
@@ -41,7 +39,7 @@ class UnicoreTests: XCTestCase {
 
         sut.observe { (value) in
             result.append(value)
-            if sequence.count > 0 { sut.dispatch(Fake.action) }
+            if sequence.count > 0 { sut.dispatch(FakeAction()) }
         }.dispose(on: disposer)
         
         XCTAssertEqual(result, expectedStateSequence)
@@ -59,8 +57,6 @@ class UnicoreTests: XCTestCase {
     
     func testMiddlewareSubscribed_StateHasChanged_MiddlewareRecevesStateBeforeChangesAndAction() {
         
-        enum Fake: Action { case action }
-        
         let firstValue = 7
         let secondValue = 2
         let expectedStateSequence = [firstValue, secondValue]
@@ -75,7 +71,7 @@ class UnicoreTests: XCTestCase {
         let sut = Core<Int>(state: sequence.popLast()!, mutate: mutate)
         
         sut.listen { value, action in
-            if value == firstValue, action is Fake {
+            if value == firstValue, action is FakeAction {
                 exp.fulfill()
             } else {
                 XCTFail()
@@ -83,7 +79,7 @@ class UnicoreTests: XCTestCase {
             
         }.dispose(on: disposer)
         
-        sut.dispatch(Fake.action)
+        sut.dispatch(FakeAction())
         
         wait(for: [exp], timeout: 0.5)
     }

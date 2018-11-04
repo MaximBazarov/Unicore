@@ -25,8 +25,11 @@
 
 import Foundation
 
-public
-final class Core<State> : Dispatcher {
+
+/// The Core, is a dispatcher and a state keeper
+///
+/// Main part of the unicore
+public final class Core<State: Codable> : Dispatcher {
     
     // MARK: - Private -
     private let coreDispatchQueue = DispatchQueue(label: "com.unicore.core-lock-queue")
@@ -35,9 +38,6 @@ final class Core<State> : Dispatcher {
     
     private var listeners: Set<Command<(State, Action)>> = []
     private var observers:  Set<Command<State>> = []
-    
-    public
-    typealias DisposeCommand = PlainCommand
     
     public
     init(state: State, mutate: @escaping Mutator<State>) {
@@ -65,9 +65,9 @@ final class Core<State> : Dispatcher {
     /// - Parameter command: this command will be called every time **after** state has changed
     /// **and when subscribe**
     ///
-    /// - Returns: `DisposeCommand` to stop observation
+    /// - Returns: `PlainCommand` to stop observation
     public
-    func observe(on queue:DispatchQueue? = nil, with observer: @escaping (State) -> Void ) -> DisposeCommand {
+    func observe(on queue:DispatchQueue? = nil, with observer: @escaping (State) -> Void ) -> PlainCommand {
         var observeCommand: Command<State>
         if let queue = queue {
             observeCommand = Command(action: observer).async(on: queue)
@@ -80,7 +80,7 @@ final class Core<State> : Dispatcher {
             observeCommand.execute(with: self.state)
         }
         
-        let stopObservation = DisposeCommand(id: "Stop observing with  \(observer)") { [weak observeCommand] in
+        let stopObservation = PlainCommand(id: "Stop observing with  \(observer)") { [weak observeCommand] in
             guard let observeCommand = observeCommand else { return }
             self.observers.remove(observeCommand)
         }.async(on: coreDispatchQueue)
@@ -92,9 +92,9 @@ final class Core<State> : Dispatcher {
     ///
     /// - Parameter command: this command will be called every time **before** state has changed
     ///
-    /// - Returns: `DisposeCommand` to stop listening
+    /// - Returns: `PlainCommand` to stop listening
     public
-    func listen(with listener: @escaping (State, Action) -> Void ) -> DisposeCommand {
+    func listen(with listener: @escaping (State, Action) -> Void ) -> PlainCommand {
         let listenerCommand = Command(action: listener)
         
         coreDispatchQueue.async {
