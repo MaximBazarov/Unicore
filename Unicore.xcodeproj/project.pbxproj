@@ -11,15 +11,12 @@
 		FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
 		FE2305FA20CFF445000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
-		FE23060120CFF8A1000E4355 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2305FE20CFF8A1000E4355 /* Action.swift */; };
-		FE23060320CFF8A1000E4355 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2305FE20CFF8A1000E4355 /* Action.swift */; };
-		FE23060420CFF8A1000E4355 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2305FE20CFF8A1000E4355 /* Action.swift */; };
 		FE23060920CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FE23060B20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FE23060C20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FE23060E20CFF9A7000E4355 /* Mutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Mutator.swift */; };
-		FE23061020CFF9A7000E4355 /* Mutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Mutator.swift */; };
-		FE23061120CFF9A7000E4355 /* Mutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Mutator.swift */; };
+		FE23060E20CFF9A7000E4355 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
+		FE23061020CFF9A7000E4355 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
+		FE23061120CFF9A7000E4355 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
 		FE5668F52177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F62177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F72177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
@@ -37,9 +34,8 @@
 		FE56690621771B040055DEF1 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE566903217719EC0055DEF1 /* DisposerTests.swift */; };
 		FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED3CF5820D0477E00AB04C8 /* Unicore.framework */; };
 		FEAD14DD20D04F1300BBBD88 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
-		FEAD14DE20D04FCB00BBBD88 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2305FE20CFF8A1000E4355 /* Action.swift */; };
 		FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FEAD14E020D04FD000BBBD88 /* Mutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Mutator.swift */; };
+		FEAD14E020D04FD000BBBD88 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
 		FEE0831820E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE0831920E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE0831A20E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,9 +75,8 @@
 		FE2305DF20CFF19C000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305F820CFF3C6000E4355 /* tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
-		FE2305FE20CFF8A1000E4355 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		FE23060020CFF8A1000E4355 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		FE23060D20CFF9A7000E4355 /* Mutator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutator.swift; sourceTree = "<group>"; };
+		FE23060D20CFF9A7000E4355 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		FE5668F42177098E0055DEF1 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		FE5668F921770D150055DEF1 /* Disposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
 		FE5668FB21770ED70055DEF1 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
@@ -187,8 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				FE23060020CFF8A1000E4355 /* Core.swift */,
-				FE2305FE20CFF8A1000E4355 /* Action.swift */,
-				FE23060D20CFF9A7000E4355 /* Mutator.swift */,
+				FE23060D20CFF9A7000E4355 /* Reducer.swift */,
 				FE5668F42177098E0055DEF1 /* Command.swift */,
 				FE5668F921770D150055DEF1 /* Disposer.swift */,
 				FE5668FB21770ED70055DEF1 /* Dispatcher.swift */,
@@ -491,9 +485,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060920CFF8A1000E4355 /* Core.swift in Sources */,
-				FE23060E20CFF9A7000E4355 /* Mutator.swift in Sources */,
+				FE23060E20CFF9A7000E4355 /* Reducer.swift in Sources */,
 				FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */,
-				FE23060120CFF8A1000E4355 /* Action.swift in Sources */,
 				FE5668F52177098F0055DEF1 /* Command.swift in Sources */,
 				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
 			);
@@ -513,8 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060B20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE23061020CFF9A7000E4355 /* Mutator.swift in Sources */,
-				FE23060320CFF8A1000E4355 /* Action.swift in Sources */,
+				FE23061020CFF9A7000E4355 /* Reducer.swift in Sources */,
 				FE5668F62177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
 				FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */,
@@ -526,8 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060C20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE23061120CFF9A7000E4355 /* Mutator.swift in Sources */,
-				FE23060420CFF8A1000E4355 /* Action.swift in Sources */,
+				FE23061120CFF9A7000E4355 /* Reducer.swift in Sources */,
 				FE5668F72177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
 				FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
@@ -557,8 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */,
-				FEAD14DE20D04FCB00BBBD88 /* Action.swift in Sources */,
-				FEAD14E020D04FD000BBBD88 /* Mutator.swift in Sources */,
+				FEAD14E020D04FD000BBBD88 /* Reducer.swift in Sources */,
 				FE5668F82177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
 				FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */,

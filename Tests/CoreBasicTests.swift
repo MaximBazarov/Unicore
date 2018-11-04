@@ -35,7 +35,7 @@ class UnicoreTests: XCTestCase {
         }
         
         var result:[Int] = []
-        let sut = Core<Int>(state: sequence.popLast()!, mutate: mutate)
+        let sut = Core<Int>(state: sequence.popLast()!, reducer: mutate)
 
         sut.observe { (value) in
             result.append(value)
@@ -50,7 +50,7 @@ class UnicoreTests: XCTestCase {
     func testMiddlewareSubscribedAndDontReceveCurrentState() {
         let state = 7
         let sut = Core<Int>(state: state) { _, _ in state }
-        sut.listen { (_, _) in
+        sut.add { (_, _) in
             XCTFail()
         }.dispose(on: disposer)
     }
@@ -68,9 +68,9 @@ class UnicoreTests: XCTestCase {
             return sequence.popLast()!
         }
         
-        let sut = Core<Int>(state: sequence.popLast()!, mutate: mutate)
+        let sut = Core<Int>(state: sequence.popLast()!, reducer: mutate)
         
-        sut.listen { value, action in
+        sut.add { value, action in
             if value == firstValue, action is FakeAction {
                 exp.fulfill()
             } else {

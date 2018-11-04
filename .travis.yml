@@ -1,5 +1,5 @@
-language: objective-c
-osx_image: xcode9.3
+language: swift
+osx_image: xcode10
 branches:
   only:
     - master
@@ -7,11 +7,11 @@ env:
   global:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
-  - WORKSPACE="Unicore.xcworkspace"
-  - IOS_FRAMEWORK_SCHEME="Unicore iOS"
-  - MACOS_FRAMEWORK_SCHEME="Unicore macOS"
-  - TVOS_FRAMEWORK_SCHEME="Unicore tvOS"
-  - WATCHOS_FRAMEWORK_SCHEME="Unicore watchOS"
+  - WORKSPACE="PromiseU.xcworkspace"
+  - IOS_FRAMEWORK_SCHEME="PromiseU iOS"
+  - MACOS_FRAMEWORK_SCHEME="PromiseU macOS"
+  - TVOS_FRAMEWORK_SCHEME="PromiseU tvOS"
+  - WATCHOS_FRAMEWORK_SCHEME="PromiseU watchOS"
   matrix:
     - DESTINATION="OS=4.3,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"  BUILD_EXAMPLE="NO"  POD_LINT="NO"
     - DESTINATION="OS=3.2,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"  BUILD_EXAMPLE="NO"  POD_LINT="NO"
