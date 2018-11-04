@@ -1,10 +1,9 @@
-<img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore—a unidirectional data flow
+<img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
-
 
 ![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
 
-
+======================================
 [![Build Status](https://travis-ci.org/Unicore/Unicore.svg?branch=master)](https://travis-ci.org/Unicore/Unicore)
 [![Version](https://img.shields.io/cocoapods/v/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 [![License](https://img.shields.io/cocoapods/l/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
