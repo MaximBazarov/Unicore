@@ -7,7 +7,7 @@
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
 is an application design approach which lets you: 
-- decrease code coupling be removing external dependencies.
+- decrease code coupling by removing external dependencies.
 - increase testability by using mostly pure functions.
 - increase maintainability by providing a high level of the code parts isolation.
 
