@@ -65,8 +65,6 @@ Having current state and action we can get the new state using `Reducer`.
 
 ### Core
 
-![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
-
 
 ## Requirements
 
