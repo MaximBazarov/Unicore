@@ -14,22 +14,18 @@ The framework itself provides you with a convenient way to apply this approach t
   - [App State](#app-state)
   - [Core](#core)  
   - [Actions](#actions)
-  - [Reducer](#reducer)
+  - [Reducer](#reducer)  
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](https://github.com/Unicore/TheMovieDB)
 - [Credits](#credits)
 - [License](#license)
 
-## Requirements
-
-* iOS: 9.0 +
-* macOS: 10.10 +
-* watchOS 2.0 +
-* tvOS: 9.0 +
-
 ## The Unicore
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
+
+## App State
 
 The app state is a plain structure which conforms to `Codable` protocol. For example simple structure like this:
 
@@ -40,8 +36,6 @@ struct AppState: Codable {
 }
 ```
 
-## App State
-
 ## Core
 
 ## Actions
@@ -51,6 +45,13 @@ struct AppState: Codable {
 
 ![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
 
+
+## Requirements
+
+* iOS: 9.0 +
+* macOS: 10.10 +
+* watchOS 2.0 +
+* tvOS: 9.0 +
 
 ## Installation
 
