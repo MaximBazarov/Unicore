@@ -6,12 +6,9 @@
 
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
-is an application design approach which lets you: 
-- decrease code coupling by removing external dependencies.
-- increase testability by using mostly pure functions.
-- increase maintainability by providing a high level of the code parts isolation.
+The Unicore is an application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and redux.js ideas. 
 
-It is a convenient combination of the data-driven and redux.js ideas. 
+The framework itself provides you with a convenient way to apply this approach to your app.
 
 - [The Unicore](#the-unicore)
   - [App State](#app-state)
@@ -31,6 +28,17 @@ It is a convenient combination of the data-driven and redux.js ideas.
 * tvOS: 9.0 +
 
 ## The Unicore
+
+The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
+
+The app state is a plain structure which conforms to `Codable` protocol. For example simple structure like this:
+
+```swift
+struct AppState: Codable {
+    let counter: Int
+    let step: Int
+}
+```
 
 ## App State
 
