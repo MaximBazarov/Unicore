@@ -36,12 +36,34 @@ struct AppState: Codable {
 }
 ```
 
-### Core
+The only way to mutate the state id to send an **Action** describing what has happend
 
 ### Actions
 
+Actions are also plain structures conforming to `Codable` protocol:
+
+The name of the action describes what has happened, and fields of the action (payload) describe the details of the event. For example this action:
+```swift
+struct StepChangeRequested: Codable {
+    let step: Int
+}
+```      
+means that step change was requested and the new step requested to be equal to field `step`.
+
+Some actions might contain no fields and the only information they bring is the name of the action.
+```swift
+struct CounterIncreaseRequested: Codable {}
+```      
+
+That action gives us information that an increase of the counter was requested and that is it.
+
+Having current state and action we can get the new state using `Reducer`.
+
 ### Reducer
 
+
+
+### Core
 
 ![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
 
