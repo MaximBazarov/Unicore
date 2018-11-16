@@ -10,7 +10,7 @@ The Unicore is an application design approach which lets you increase the reliab
 
 The framework itself provides you with a convenient way to apply this approach to your app.
 
-- [The Unicore](#the-unicore)
+- [Building Blocks](#building-blocks)
   - [App State](#app-state)
   - [Core](#core)  
   - [Actions](#actions)
@@ -21,7 +21,7 @@ The framework itself provides you with a convenient way to apply this approach t
 - [Credits](#credits)
 - [License](#license)
 
-## The Unicore
+## Building Blocks
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
