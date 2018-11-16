@@ -25,7 +25,7 @@ The framework itself provides you with a convenient way to apply this approach t
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
-## App State
+### App State
 
 The app state is a plain structure which conforms to `Codable` protocol. For example simple structure like this:
 
@@ -36,11 +36,11 @@ struct AppState: Codable {
 }
 ```
 
-## Core
+### Core
 
-## Actions
+### Actions
 
-## Reducer
+### Reducer
 
 
 ![Unicore](https://raw.githubusercontent.com/MaximBazarov/Unicore/master/Docs/img/unicore-base.png)
