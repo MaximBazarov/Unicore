@@ -154,8 +154,15 @@ Alright, we prepare everything we need for making the application working, the o
 `Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want, the only constraint is that it must conform `Codable`.
 
 ```swift
-
+    let core = Core<AppState>( // #1
+        state: AppState(counter: 0, step: 1), // #2
+        reducer: reduce // #3
+    )
 ```
+1. Set the generic parameter to `AppState` to let `Core` knows that we need a reducer which deals with `AppState` as a state.
+2. Providing `Core` with the initial state
+3. Providing core with the reducer, the function we have written before.
+
 
 ## Requirements
 
