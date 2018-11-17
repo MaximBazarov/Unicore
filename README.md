@@ -40,11 +40,11 @@ The only way to mutate the state id to send an **Action** describing what has ha
 
 ### Actions
 
-Actions are also plain structures conforming to `Codable` protocol:
+Actions are also plain structures conforming to `Action` protocol (which conforms to `Codable`):
 
 The name of the action describes what has happened, and fields of the action (payload) describe the details of the event. For example this action:
 ```swift
-struct StepChangeRequested: Codable {
+struct StepChangeRequested: Action {
     let step: Int
 }
 ```      
@@ -52,7 +52,7 @@ means that step change was requested and the new step requested to be equal to f
 
 Some actions might contain no fields and the only information they bring is the name of the action.
 ```swift
-struct CounterIncreaseRequested: Codable {}
+struct CounterIncreaseRequested: Action {}
 ```      
 
 That action gives us information that an increase of the counter was requested and that is it.
