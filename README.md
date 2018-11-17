@@ -83,7 +83,7 @@ func reduce(_ old: AppState, with action: Action) -> AppState {
 1. Unwrap `payload` if action is `StepChangeRequested` 
 2. Return new instance of `AppState`
 3. `counter` value stays the same
-4. `step` updates with the new value `from payload` 
+4. `step` updates with the new value from `payload` 
 5. for all other actions returns the old state
 
 Test of this reducer might be something like this:
