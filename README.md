@@ -202,7 +202,7 @@ pod 'Unicore', :git => 'git@github.com:Unicore/Unicore.git', :branch => 'release
 ```
 # API and Usage
 
-## Create Core](#create-core)
+## Create Core
 
 ## Dispatch
 
