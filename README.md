@@ -198,7 +198,7 @@ Unicore is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Unicore'
+pod 'Unicore', :git => 'git@github.com:Unicore/Unicore.git', :branch => 'release-1-0'
 ```
 # API and Usage
 
