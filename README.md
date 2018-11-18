@@ -9,25 +9,41 @@
 The Unicore is an application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and redux.js ideas. 
 
 The framework itself provides you with a convenient way to apply this approach to your app.
-
-- [Building Blocks](#building-blocks)
+- [Requirements](#requirements)
+- [Design Approach](#design-approach)
   - [App State](#app-state)
   - [Core](#core)  
   - [Actions](#actions)
   - [Reducer](#reducer)  
-- [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](https://github.com/Unicore/TheMovieDB)
+- [Framework API](#api-and-usage)
+  - [Create Core](#create-core)
+  - [Dispatch](#dispatch)  
+  - [Subsribe](#subscribe)  
+  - [Register Middleware](#register-middleware)
+  - [Dispose](#dispose)  
+- [Examples](#examples)
+  - [The Movie DB (tbd)](#the-movie-db)
+  - [Counter (tbd)](#the-movie-db)
+  - [ToDo list (tbd)](#the-movie-db)
 - [Credits](#credits)
 - [License](#license)
 
-## Building Blocks
+
+# Requirements
+
+* iOS: 9.0 +
+* macOS: 10.10 +
+* watchOS 2.0 +
+* tvOS: 9.0 +
+
+# Design Approach
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
-### App State
+## App State
 
-The app state is a plain structure which conforms to `Codable` protocol. For example simple structure like this:
+The app state would be that source it's a plain structure which conforms to `Codable` protocol. For example simple structure like this:
 
 ```swift
 struct AppState: Codable {
@@ -35,10 +51,34 @@ struct AppState: Codable {
     let step: Int
 }
 ```
+Let's imagine a simple app where we need to show the counter and increase/decrease buttons. And to add a bit of logic let's also have the control on a step.
 
-The only way to mutate the state id to send an **Action** describing what has happend
+So, in that case, the `AppState` would be our only source of the current app state, we look into the instance of the `AppState`  and we have the right values we need to display.
+That's what is **single source of truth**.
 
-### Actions
+But the problem here would be to give access to that state for each part of the app, screens, services, etc. and more importantly provide them with a way to mutate this state, so everybody knows that it was changed. The `Observer` pattern would solve these problems, but to make changes, we need some external ways not only internal as they usually are in the observer.
+
+That's why we use the `Event Bus` pattern to solve this, and we dispatch actions to the [Core](#core) which would mutate the state.
+
+
+## Core
+
+`Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want, the only constraint is that it must conform `Codable`.
+
+```swift
+    let core = Core<AppState>( // #1
+        state: AppState(counter: 0, step: 1), // #2
+        reducer: reduce // #3
+    )
+```
+1. Set the generic parameter to `AppState` to let `Core` knows that we need a reducer which deals with `AppState` as a state.
+2. Providing `Core` with the initial state
+3. Providing core with the reducer, the function we have written before.
+
+When you dispatch an action to the core, it uses a [Reducer](#reducer) to create a new version of the app state and then lets every subscriber know that there is a new app state.
+
+
+## Actions
 
 Actions are also plain structures conforming to `Action` protocol (which conforms to `Codable`):
 
@@ -61,7 +101,7 @@ These actions give us information that an increase or decrease of the counter wa
 
 Having current state and action we can get the new state using `Reducer`.
 
-### Reducer
+## Reducer
 A Reducer is a function which gets a state and action as a parameter and returns a new state, it's a pure function, and it must not block a current thread, that means every heavy calculation must be not in reducers.
 
 And reducers are the only way to change the current state, for example, let's change the step if the action is `StepChangeRequested` then we update the step with the payload value:
@@ -149,29 +189,8 @@ func testReducer_CounterDecreaseRequested_counterMustBeDecreased() {
 
 Alright, we prepare everything we need for making the application working, the only thing needed is to create our `Core` instance:
 
-### Core
 
-`Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want, the only constraint is that it must conform `Codable`.
-
-```swift
-    let core = Core<AppState>( // #1
-        state: AppState(counter: 0, step: 1), // #2
-        reducer: reduce // #3
-    )
-```
-1. Set the generic parameter to `AppState` to let `Core` knows that we need a reducer which deals with `AppState` as a state.
-2. Providing `Core` with the initial state
-3. Providing core with the reducer, the function we have written before.
-
-
-## Requirements
-
-* iOS: 9.0 +
-* macOS: 10.10 +
-* watchOS 2.0 +
-* tvOS: 9.0 +
-
-## Installation
+# Installation
 
 Unicore is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -179,8 +198,23 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Unicore'
 ```
+# API and Usage
 
-## Credits
+## Create Core](#create-core)
+
+## Dispatch
+
+## Subsribe
+
+## Register Middleware
+
+## Dispose
+
+# Examples
+
+
+
+# Credits
 
 [Maxim Bazarov](https://github.com/MaximBazarov):  Maintainer of the framework, and evangelist of this approach.
 
@@ -190,6 +224,6 @@ pod 'Unicore'
 
 
 
-## License
+# License
 
 Unicore is available under the MIT license. See the LICENSE file for more info.
