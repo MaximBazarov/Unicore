@@ -6,7 +6,7 @@
 
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
-The Unicore is an application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and redux.js ideas. 
+The Unicore is a highly scalable application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and redux.js ideas. 
 
 The framework itself provides you with a convenient way to apply this approach to your app.
 - [Requirements](#requirements)
@@ -40,6 +40,8 @@ The framework itself provides you with a convenient way to apply this approach t
 # Design Approach
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
+
+![Unicore](Docs/img/unicore-min.svg)
 
 ## App State
 
