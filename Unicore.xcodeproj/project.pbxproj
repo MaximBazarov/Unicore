@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2B3C38421BD80B000E246BE /* ProtectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* ProtectedValue.swift */; };
+		D2B3C38521BD80DF00E246BE /* ProtectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* ProtectedValue.swift */; };
+		D2B3C38621BD80DF00E246BE /* ProtectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* ProtectedValue.swift */; };
+		D2B3C38721BD80E000E246BE /* ProtectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* ProtectedValue.swift */; };
 		FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE23057D20CFF0E5000E4355 /* Unicore.framework */; };
 		FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
@@ -67,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2B3C38321BD80B000E246BE /* ProtectedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedValue.swift; sourceTree = "<group>"; };
 		FE23057D20CFF0E5000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE23058120CFF0E5000E4355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +191,7 @@
 				FE5668F42177098E0055DEF1 /* Command.swift */,
 				FE5668F921770D150055DEF1 /* Disposer.swift */,
 				FE5668FB21770ED70055DEF1 /* Dispatcher.swift */,
+				D2B3C38321BD80B000E246BE /* ProtectedValue.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -486,6 +492,7 @@
 			files = (
 				FE23060920CFF8A1000E4355 /* Core.swift in Sources */,
 				FE23060E20CFF9A7000E4355 /* Reducer.swift in Sources */,
+				D2B3C38421BD80B000E246BE /* ProtectedValue.swift in Sources */,
 				FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */,
 				FE5668F52177098F0055DEF1 /* Command.swift in Sources */,
 				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
@@ -507,6 +514,7 @@
 			files = (
 				FE23060B20CFF8A1000E4355 /* Core.swift in Sources */,
 				FE23061020CFF9A7000E4355 /* Reducer.swift in Sources */,
+				D2B3C38521BD80DF00E246BE /* ProtectedValue.swift in Sources */,
 				FE5668F62177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
 				FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */,
@@ -519,6 +527,7 @@
 			files = (
 				FE23060C20CFF8A1000E4355 /* Core.swift in Sources */,
 				FE23061120CFF9A7000E4355 /* Reducer.swift in Sources */,
+				D2B3C38621BD80DF00E246BE /* ProtectedValue.swift in Sources */,
 				FE5668F72177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
 				FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
@@ -549,6 +558,7 @@
 			files = (
 				FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */,
 				FEAD14E020D04FD000BBBD88 /* Reducer.swift in Sources */,
+				D2B3C38721BD80E000E246BE /* ProtectedValue.swift in Sources */,
 				FE5668F82177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
 				FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
