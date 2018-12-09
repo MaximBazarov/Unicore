@@ -1,5 +1,5 @@
 //
-//  ProtectedValue.swift
+//  AtomicValue.swift
 //  Unicore
 //
 //  Created by Maxim Bazarov on 09.12.18.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// Gives your value thread protection
-public final class ProtectedValue<T> {
+public final class AtomicValue<T> {
     
     public var value: T {
         get {
@@ -25,7 +25,7 @@ public final class ProtectedValue<T> {
         }
     }
     
-    private let lock = DispatchQueue(label: "code.unicore.protected-value-lock")
+    private let lock = DispatchQueue(label: "code.unicore.atomic-value-lock")
     private var _value: T
 
     public init(_ value: T) {
