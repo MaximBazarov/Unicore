@@ -270,6 +270,9 @@ class YourClass {
 ```
 
 ## Register Middleware
+Middleware is supposed to help you to observe the state changes along with the action happened, and it might be useful when you want to track events to your analytics:
+
+
 
 # Utilities
 
