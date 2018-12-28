@@ -282,13 +282,45 @@ class YourClass {
 ## Register Middleware
 Middleware is supposed to help you to observe the state changes along with the action happened, and it might be useful when you want to track events to your analytics:
 
+```swift
+core.add(middleware: { (state, action) in
+    if let payload = action as? ScreenShown {
+        // if action is ScreenShown then track that screen has been shown
+        // using screen name from action and application state at the moment
+        tracker.trackScreenShown(payload.name, counter: state.counter)
+    } 
+}).dispose(on: disposer)
+```
 
 
 # Utilities
 
 ## Command
 
+Commands are the wrappers on swift closures with a convenient API to dispatch and bind them to values.
 
+Initialization
+`Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`. 
+
+```swift
+let c = Command<Int>(action: { value in
+    print(value)
+})
+```
+or shorter the same 
+
+```swift
+let c = Command<Int>{ value in
+    print(value)
+}
+```
+you can also specify a debug description values to have a hint when debugging 
+```swift
+let c = Command<Int>.init(id: "Print the int") { (value) in
+    print(value)
+}
+```
+![Command Debug Preview](Docs/img/command-debug.png)
 
 
 # Examples
