@@ -221,6 +221,8 @@ struct AppState {
 then you need to describe how this state is going to react to actions:
 ```swift
 func reducer(old: AppState, with action: Action) -> AppState {
+    
+    // handle CounterIncreaseRequested action
     if action is CounterIncreaseRequested {
         return AppState(
             a: old.a + 1,
