@@ -11,17 +11,17 @@ The Unicore is a highly scalable application design approach which lets you incr
 The framework itself provides you with a convenient way to apply this approach to your app.
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Design Approach](#design-approach)
+    - [App State](#app-state)
+    - [Core](#core)  
+    - [Actions](#actions)
+    - [Reducer](#reducer)  
 - [Framework API](#api-and-usage)
   - [Create Core](#create-core)
   - [Dispatch](#dispatch)  
   - [Subsribe](#subscribe)  
   - [Register Middleware](#register-middleware)
   - [Dispose](#dispose)  
-- [Design Approach](#design-approach)
-    - [App State](#app-state)
-    - [Core](#core)  
-    - [Actions](#actions)
-    - [Reducer](#reducer)  
 - [Examples](#examples)
 - [Credits](#credits)
 - [License](#license)
@@ -42,123 +42,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Unicore', :git => 'git@github.com:Unicore/Unicore.git', :branch => 'release-1-0'
 ```
-# API and Usage
 
-## Create Core
-
-To use Unicore you have to create a `Core` class instance.    
-Since `Core` is a generic type, before that you have to define `State` class, it might be of any type you want. Let's say we have our state described as a structure [App State](#app-state), then you need to describe how this state is going to react to actions using a [Reducer](#reducer), now you good to go and you can create an instance of the `Core`:
-```swift
-let core = Core<AppState>(state: AppState.initial, reducer: reducer)
-```
-
-That's it we good to go, now we can dispatch an `Action` to modify our state or subscribe to state changes.
-
-
-## Dispatch
-
-
-```swift
-let action = CounterIncreaseRequested() // #1
-core.dispatch(action) // #2
-```
-
-
-## Subsribe
-The only way to get the current state is to subscribe to the state changes:
-```swift
-sut.observe { state in
-    // do something with state
-    print(state.counter)
-}.dispose(on: disposer) // dispose the subscription when current disposer will dispose
-```
-The closure will be called whenever the state updates.
-
-If you want to handle state updates on a particular thread, e.g. main thread to update your screen, you can use 
-`observe(on: DispatchQueue)` syntax:
-
-```swift
-core.observe(on: .main) { (state) in
-    self.counterLabel.text = String(state.counter)
-}.dispose(on: disposer)
-```
-
-## Dispose
-
-When you subscribe to the state changes, the function `observe` returns a `PlainCommand` to remove the subscription when it's no longer needed. You can call it directly when you want to unsubscribe:
-```swift
-class YourClass {
-    let unsubscribe: PlainCommand?
-    
-    func connect(to core: Core<AppState>) {
-        unsubscribe = core.observe { (state) in
-            // handle the state
-        }
-    }
-    
-    deinit {
-        unsubscribe?()
-    }
-}
-```
-
-Or you can use a `Disposer` and add this command to it. A disposer will call this command when it will dispose:
- 
-```swift
-class YourClass {
-    let disposer = Disposer()
-    
-    func connect(to core: Core<AppState>) {
-        core.observe { (state) in
-            // handle the state
-        }.dispose(on: disposer)
-        // when YourClass will deinit hence disposer will also deinited, and before that, it will call all unsubscription functions registered in it
-    }
-}
-```
-
-## Register Middleware
-Middleware is supposed to help you to observe the state changes along with the action happened, and it might be useful when you want to track events to your analytics:
-
-```swift
-core.add(middleware: { (state, action) in
-    if let payload = action as? ScreenShown {
-        // if action is ScreenShown then track that screen has been shown
-        // using screen name from action and application state at the moment
-        tracker.trackScreenShown(payload.name, counter: state.counter)
-    } 
-}).dispose(on: disposer)
-```
-
-
-# Utilities
-
-## Command
-
-Commands are the wrappers on swift closures with a convenient API to dispatch and bind them to values.
-
-Initialization
-`Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`. 
-
-```swift
-let c = Command<Int>(action: { value in
-    print(value)
-})
-```
-or shorter the same 
-
-```swift
-let c = Command<Int>{ value in
-    print(value)
-}
-```
-you can also specify a debug description values to have a hint when debugging 
-```swift
-let c = Command<Int>.init(id: "Print the int") { (value) in
-    print(value)
-}
-```
-![Command Debug Preview](Docs/img/command-debug.png)
 
 # Design Approach
 
@@ -316,6 +200,125 @@ func testReducer_CounterDecreaseRequested_counterMustBeDecreased() {
 ```
 
 Alright, we prepare everything we need for making the application working, the only thing needed is to create our `Core` instance:
+
+
+# API and Usage
+
+## Create Core
+
+To use Unicore you have to create a `Core` class instance.    
+Since `Core` is a generic type, before that you have to define `State` class, it might be of any type you want. Let's say we have our state described as a structure [App State](#app-state), then you need to describe how this state is going to react to actions using a [Reducer](#reducer), now you good to go and you can create an instance of the `Core`:
+```swift
+let core = Core<AppState>(state: AppState.initial, reducer: reducer)
+```
+
+That's it we good to go, now we can dispatch an `Action` to modify our state or subscribe to state changes.
+
+
+## Dispatch
+
+
+```swift
+let action = CounterIncreaseRequested() // #1
+core.dispatch(action) // #2
+```
+
+
+## Subscribe
+The only way to get the current state is to subscribe to the state changes:
+```swift
+sut.observe { state in
+    // do something with state
+    print(state.counter)
+}.dispose(on: disposer) // dispose the subscription when current disposer will dispose
+```
+The closure will be called whenever the state updates.
+
+If you want to handle state updates on a particular thread, e.g. main thread to update your screen, you can use 
+`observe(on: DispatchQueue)` syntax:
+
+```swift
+core.observe(on: .main) { (state) in
+    self.counterLabel.text = String(state.counter)
+}.dispose(on: disposer)
+```
+
+## Dispose
+
+When you subscribe to the state changes, the function `observe` returns a `PlainCommand` to remove the subscription when it's no longer needed. You can call it directly when you want to unsubscribe:
+```swift
+class YourClass {
+    let unsubscribe: PlainCommand?
+    
+    func connect(to core: Core<AppState>) {
+        unsubscribe = core.observe { (state) in
+            // handle the state
+        }
+    }
+    
+    deinit {
+        unsubscribe?()
+    }
+}
+```
+
+Or you can use a `Disposer` and add this command to it. A disposer will call this command when it will dispose:
+ 
+```swift
+class YourClass {
+    let disposer = Disposer()
+    
+    func connect(to core: Core<AppState>) {
+        core.observe { (state) in
+            // handle the state
+        }.dispose(on: disposer)
+        // when YourClass will deinit hence disposer will also deinited, and before that, it will call all unsubscription functions registered in it
+    }
+}
+```
+
+## Register Middleware
+Middleware is supposed to help you to observe the state changes along with the action happened, and it might be useful when you want to track events to your analytics:
+
+```swift
+core.add(middleware: { (state, action) in
+    if let payload = action as? ScreenShown {
+        // if action is ScreenShown then track that screen has been shown
+        // using screen name from action and application state at the moment
+        tracker.trackScreenShown(payload.name, counter: state.counter)
+    } 
+}).dispose(on: disposer)
+```
+
+
+# Utilities
+
+## Command
+
+Commands are the wrappers on swift closures with a convenient API to dispatch and bind them to values.
+
+Initialization
+`Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`. 
+
+```swift
+let c = Command<Int>(action: { value in
+    print(value)
+})
+```
+or shorter the same 
+
+```swift
+let c = Command<Int>{ value in
+    print(value)
+}
+```
+you can also specify a debug description values to have a hint when debugging 
+```swift
+let c = Command<Int>.init(id: "Print the int") { (value) in
+    print(value)
+}
+```
+![Command Debug Preview](Docs/img/command-debug.png)
 
 
 # Examples
