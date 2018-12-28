@@ -59,6 +59,8 @@ final class Disposer {
             self.disposals.append(disposal)
         }
     }
+
+    public init() {}
     
     deinit {
         disposals.forEach{$0.execute()}
