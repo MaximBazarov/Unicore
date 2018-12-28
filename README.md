@@ -52,6 +52,9 @@ The app state would be that source it's a plain structure which conforms to `Cod
 struct AppState: Codable {
     let counter: Int
     let step: Int
+
+    // Initial state 
+    static let initial = AppState(counter: 0, step: 1)
 }
 ```
 Let's imagine a simple app where we need to show the counter and increase/decrease buttons. And to add a bit of logic let's also have the control on a step.
