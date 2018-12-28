@@ -73,7 +73,7 @@ That's why we use the `Event Bus` pattern to solve this, and we dispatch actions
 
 ```swift
     let core = Core<AppState>( // #1
-        state: AppState(counter: 0, step: 1), // #2
+        state: AppState.initial, // #2
         reducer: reduce // #3
     )
 ```
@@ -220,12 +220,48 @@ That's it we good to go, now we can dispatch an `Action` to modify our state or 
 ## Dispatch
 
 
+```swift
+let action = CounterIncreaseRequested() // #1
+core.dispatch(action) // #2
+```
+
 
 ## Subsribe
 
-## Register Middleware
+```swift
+sut.observe { state in
+    // do something with state
+    print(state.counter)
+}.dispose(on: disposer) // dispose the subscription when current disposer will dispose
+```
 
 ## Dispose
+
+When you subscribe to the state changes, the function `observe` returns a `PlainCommand` to remove the subscription when it's no longer needed. You can call it directly when you want to unsubscribe 
+
+Or you can use a `Disposer` and add this command to it. A disposer will call this command when it will dispose:
+ 
+```swift
+class YourClass {
+    let disposer = Disposer()
+    
+    func connect(to core: Core<AppState>) {
+        core.observe { (state) in
+            // handle the state
+        }.dispose(on: disposer)
+        // when YourClass will deinit hence disposer will also deinited, and before that, it will call all unsubscription functions registered in it
+    }
+}
+```
+
+## Register Middleware
+
+# Utilities
+
+## Command
+
+
+
 
 # Examples
 
