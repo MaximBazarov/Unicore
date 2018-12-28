@@ -297,7 +297,7 @@ core.add(middleware: { (state, action) in
 
 Commands are the wrappers on swift closures with a convenient API to dispatch and bind them to values.
 
-Initialization
+### Initialization
 `Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`. 
 
 ```swift
@@ -320,6 +320,37 @@ let c = Command<Int>.init(id: "Print the int") { (value) in
 ```
 ![Command Debug Preview](Docs/img/command-debug.png)
 
+### Execution
+When you have done with the command setup you execute it as a function with a particular value:  
+```swift
+commandInt(with: 7)
+```
+
+### PlainCommand
+`PlainCommand` is a type alias for `Command<Void>` it can be executed as a function `plainCommand()` without a parameter.
+
+### Binding to value
+If you want to bind a comand with a value you can use convenient method `.bound(to:)` e.g. 
+```swift
+let printInt = Command<Int>{ value in
+  print(value)
+}
+
+let printSeven = printInt.bound(to: 7)
+```
+this will return a `PlainCommand` with `7` as a value, so when you will execute it, you no longer have to provide a value:
+
+```swift
+printSeven()
+```
+### Dispatching
+when you want the command to be executed only on a particular thread (queue), you can also set this by using
+`async(on:)` syntax
+```swift
+let printSevenOnMain = printSeven.async(on: .main)
+```
+
+now wherever you execute this command, it will be executed on the main thread.
 
 # Examples
 
