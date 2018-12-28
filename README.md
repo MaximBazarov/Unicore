@@ -237,7 +237,22 @@ sut.observe { state in
 
 ## Dispose
 
-When you subscribe to the state changes, the function `observe` returns a `PlainCommand` to remove the subscription when it's no longer needed. You can call it directly when you want to unsubscribe 
+When you subscribe to the state changes, the function `observe` returns a `PlainCommand` to remove the subscription when it's no longer needed. You can call it directly when you want to unsubscribe:
+```swift
+class YourClass {
+    let unsubscribe: PlainCommand?
+    
+    func connect(to core: Core<AppState>) {
+        unsubscribe = core.observe { (state) in
+            // handle the state
+        }
+    }
+    
+    deinit {
+        unsubscribe?()
+    }
+}
+```
 
 Or you can use a `Disposer` and add this command to it. A disposer will call this command when it will dispose:
  
