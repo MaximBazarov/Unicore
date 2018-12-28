@@ -227,12 +227,22 @@ core.dispatch(action) // #2
 
 
 ## Subsribe
-
+The only way to get the current state is to subscribe to the state changes:
 ```swift
 sut.observe { state in
     // do something with state
     print(state.counter)
 }.dispose(on: disposer) // dispose the subscription when current disposer will dispose
+```
+The closure will be called whenever the state updates.
+
+If you want to handle state updates on a particular thread, e.g. main thread to update your screen, you can use 
+`observe(on: DispatchQueue)` syntax:
+
+```swift
+core.observe(on: .main) { (state) in
+    self.counterLabel.text = String(state.counter)
+}.dispose(on: disposer)
 ```
 
 ## Dispose
