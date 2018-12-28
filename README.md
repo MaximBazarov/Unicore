@@ -205,35 +205,8 @@ pod 'Unicore', :git => 'git@github.com:Unicore/Unicore.git', :branch => 'release
 
 ## Create Core
 
-To use Unicore you have to create a `Core` class instance. 
-
-### State and Reducer
-Since `Core` is a generic type, before that you have to define `State` class, it might be of any type you want. Let's say we have our state described as a structure:
-```swift
-struct AppState {
-    let a: Int
-    let b: String
-    
-    // Shortcut to create a default AppState.
-    static let initial = AppState(a: 0, b: "")
-}
-```
-then you need to describe how this state is going to react to actions:
-```swift
-func reducer(old: AppState, with action: Action) -> AppState {
-    
-    // handle CounterIncreaseRequested action
-    if action is CounterIncreaseRequested {
-        return AppState(
-            a: old.a + 1,
-            b: old.b
-        )
-    }
-
-    return old
-}
-```
-now you good to go and you can create an instance of the Core
+To use Unicore you have to create a `Core` class instance.    
+Since `Core` is a generic type, before that you have to define `State` class, it might be of any type you want. Let's say we have our state described as a structure [App State](#app-state), then you need to describe how this state is going to react to actions using a [Reducer](#reducer), now you good to go and you can create an instance of the `Core`:
 ```swift
 let core = Core<AppState>(state: AppState.initial, reducer: reducer)
 ```
