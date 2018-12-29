@@ -33,9 +33,6 @@ public protocol Action: Codable {}
 /// Main part of the unicore
 public final class Core<State: Codable> {
     
-    /// Function to proceed from current state to a new one
-    public typealias Reducer<State> = (State, Action) -> State
-    
     /// Function to be added as
     public typealias Middleware = (State, Action) -> Void
     
