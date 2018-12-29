@@ -225,7 +225,7 @@ core.dispatch(action) // #2
 
 
 ## Subscribe
-The only way to get the current state is to subscribe to the state changes:
+The only way to get the current state is to subscribe to the state changes, **it's very important to know that you'll receive the current state value immediately when you subscribe**:
 ```swift
 sut.observe { state in
     // do something with state
