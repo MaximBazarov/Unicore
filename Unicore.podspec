@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'Unicore'
-  s.version = '0.0.5'
+  s.version = '1.0.0'
   s.swift_version = '4.2'
   s.license = 'MIT'
   s.summary = 'Unicore — unidirectional dispatcher and state manager'
