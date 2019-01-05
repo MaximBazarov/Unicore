@@ -10,6 +10,8 @@ import XCTest
 
 class UnicoreTests: XCTestCase {
     
+    let disposer = Disposer()
+    struct FakeAction: Action {}
     
     // MARK: Components
     
@@ -19,29 +21,26 @@ class UnicoreTests: XCTestCase {
         let sut = Core<Int>(state: state) { _, _ in state }
         sut.observe { value in
             if value == state { exp.fulfill() }
-        }
+        }.dispose(on: disposer)
         wait(for: [exp], timeout: 0.1)
     }
     
     func testComponentSubscribed_StateHasChanged_ComponentRecevesAllStateChanges() {
-        
-        enum Fake: Action { case action }
-        
         let expectedStateSequence = [7, 2]
         
         var sequence = Array(expectedStateSequence.reversed())
         
-        func mutate(_ state: Int, _ action: Action) -> Int {
+        func reduce(_ state: Int, _ action: Action) -> Int {
             return sequence.popLast()!
         }
         
         var result:[Int] = []
-        let sut = Core<Int>(state: sequence.popLast()!, mutate: mutate)
+        let sut = Core<Int>(state: sequence.popLast()!, reducer: reduce)
 
         sut.observe { (value) in
             result.append(value)
-            if sequence.count > 0 { sut.dispatch(Fake.action) }
-        }
+            if sequence.count > 0 { sut.dispatch(FakeAction()) }
+        }.dispose(on: disposer)
         
         XCTAssertEqual(result, expectedStateSequence)
     }
@@ -51,14 +50,12 @@ class UnicoreTests: XCTestCase {
     func testMiddlewareSubscribedAndDontReceveCurrentState() {
         let state = 7
         let sut = Core<Int>(state: state) { _, _ in state }
-        sut.listen { (_, _) in
+        sut.add { (_, _) in
             XCTFail()
-        }
+        }.dispose(on: disposer)
     }
     
     func testMiddlewareSubscribed_StateHasChanged_MiddlewareRecevesStateBeforeChangesAndAction() {
-        
-        enum Fake: Action { case action }
         
         let firstValue = 7
         let secondValue = 2
@@ -67,22 +64,22 @@ class UnicoreTests: XCTestCase {
         
         var sequence = Array(expectedStateSequence.reversed())
         
-        func mutate(_ state: Int, _ action: Action) -> Int {
+        func reduce(_ state: Int, _ action: Action) -> Int {
             return sequence.popLast()!
         }
         
-        let sut = Core<Int>(state: sequence.popLast()!, mutate: mutate)
+        let sut = Core<Int>(state: sequence.popLast()!, reducer: reduce)
         
-        sut.listen { value, action in
-            if value == firstValue, action is Fake {
+        sut.add { value, action in
+            if value == firstValue, action is FakeAction {
                 exp.fulfill()
             } else {
                 XCTFail()
             }
             
-        }
+        }.dispose(on: disposer)
         
-        sut.dispatch(Fake.action)
+        sut.dispatch(FakeAction())
         
         wait(for: [exp], timeout: 0.5)
     }

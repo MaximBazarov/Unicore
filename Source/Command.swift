@@ -1,8 +1,7 @@
 //
-//  FunctionalFoundation.h
+//  Command.swift
 //  Unicore
 //
-//  Created by Maxim Bazarov on 4/2/18.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,10 +24,11 @@
 
 import Foundation
 
+
 public
-final class Command<T> {
+class Command<T> {
     
-    private let action: (T) -> () // underlying closure
+    let action: (T) -> () // underlying closure
     
     // Block of `context` defined variables. Allows Command to be debugged
     private let file: StaticString
@@ -62,14 +62,21 @@ final class Command<T> {
     @objc
     public
     func debugQuickLookObject() -> AnyObject? {
-        return """
-            type: \(String(describing: type(of: self)))
-            id: \(id)
-            file: \(file)
-            function: \(function)
-            line: \(line)
-            """ as NSString
+       return debugDescription as NSString
     }
+}
+
+extension Command: CustomDebugStringConvertible {
+    
+    public var debugDescription: String {
+        return """
+            \(String(describing: type(of: self))) id: \(id)
+            \tfile: \(file)
+            \tfunction: \(function)
+            \tline: \(line)
+            """
+    }
+
 }
 
 
@@ -131,5 +138,4 @@ extension Command {
         }
     }
 }
-
 

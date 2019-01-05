@@ -1,5 +1,5 @@
-language: objective-c
-osx_image: xcode9.3
+language: swift
+osx_image: xcode10.1
 branches:
   only:
     - master
@@ -12,12 +12,13 @@ env:
   - MACOS_FRAMEWORK_SCHEME="Unicore macOS"
   - TVOS_FRAMEWORK_SCHEME="Unicore tvOS"
   - WATCHOS_FRAMEWORK_SCHEME="Unicore watchOS"
+  
   matrix:
     - DESTINATION="OS=4.3,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"  BUILD_EXAMPLE="NO"  POD_LINT="NO"
     - DESTINATION="OS=3.2,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"  BUILD_EXAMPLE="NO"  POD_LINT="NO"
     - DESTINATION="OS=2.2,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO"  BUILD_EXAMPLE="NO"  POD_LINT="NO"
 
-    - DESTINATION="OS=11.3,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"
+    - DESTINATION="OS=11.3,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
     - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"   SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
     - DESTINATION="OS=9.3,name=iPhone 6"           SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
 
