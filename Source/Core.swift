@@ -26,12 +26,12 @@
 import Foundation
 
 /// Marker protocol to keep actions list open
-public protocol Action: Codable {}
+public protocol Action {}
 
 /// The Core, is a dispatcher and a state keeper
 ///
 /// Main part of the unicore
-public final class Core<State: Codable> {
+public final class Core<State> {
     
     /// Function to be added as
     public typealias Middleware = (State, Action) -> Void

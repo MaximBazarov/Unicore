@@ -34,15 +34,16 @@ class UnicoreTests: XCTestCase {
             return sequence.popLast()!
         }
         
-        var result:[Int] = []
+        let result: AtomicValue<[Int]> = AtomicValue([])
+        
         let sut = Core<Int>(state: sequence.popLast()!, reducer: reduce)
 
         sut.observe { (value) in
-            result.append(value)
+            result.value.append(value)
             if sequence.count > 0 { sut.dispatch(FakeAction()) }
         }.dispose(on: disposer)
         
-        XCTAssertEqual(result, expectedStateSequence)
+        XCTAssertEqual(result.value, expectedStateSequence)
     }
     
     // MARK: Middleware
