@@ -52,10 +52,10 @@ The idea behind the Unicore is to have one *single source of truth* (app state) 
 
 ## App State
 
-The app state would be that source it's a plain structure which conforms to `Codable` protocol. For example simple structure like this:
+The app state would be that source it's a plain structure. For example simple structure like this:
 
 ```swift
-struct AppState: Codable {
+struct AppState: {
     let counter: Int
     let step: Int
 
@@ -75,7 +75,7 @@ That's why we use the `Event Bus` pattern to solve this, and we dispatch actions
 
 ## Core
 
-`Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want, the only constraint is that it must conform `Codable`.
+`Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want.
 
 ```swift
     let core = Core<AppState>( // #1
@@ -92,7 +92,7 @@ When you dispatch an action to the core, it uses a [Reducer](#reducer) to create
 
 ## Actions
 
-Actions are also plain structures conforming to `Action` protocol (which conforms to `Codable`):
+Actions are also plain structures conforming to `Action` protocol.
 
 The name of the action describes what has happened, and fields of the action (payload) describe the details of the event. For example this action:
 ```swift
