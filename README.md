@@ -55,7 +55,7 @@ The idea behind the Unicore is to have one *single source of truth* (app state) 
 The app state would be that source it's a plain structure. For example simple structure like this:
 
 ```swift
-struct AppState: {
+struct AppState {
     let counter: Int
     let step: Int
 
