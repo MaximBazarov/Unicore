@@ -40,8 +40,8 @@ public final class Core<State> {
     
     private var state: State
     private let reducer: Reducer<State>
-    private var middleware: Set<Command<(State, Action)>> = []
-    private var observers:  Set<Command<State>> = []
+    private var actionsObservers: Set<Command<(State, Action)>> = []
+    private var stateObservers:  Set<Command<State>> = []
     
     
     /// Core initialization
@@ -66,9 +66,9 @@ extension Core: Dispatcher {
     /// - Parameter action: Action regarding which state must be mutated.
     public func dispatch(_ action: Action) {
         coreDispatchQueue.async {
-            self.middleware.forEach {$0.execute(with: (self.state, action))}
+            self.actionsObservers.forEach {$0.execute(with: (self.state, action))}
             self.state = self.reducer(self.state, action)
-            self.observers.forEach { $0.execute(with: self.state) }
+            self.stateObservers.forEach { $0.execute(with: self.state) }
         }
     }
     
@@ -94,7 +94,7 @@ extension Core {
         }
         
         coreDispatchQueue.async {
-            self.observers.insert(observeCommand)
+            self.stateObservers.insert(observeCommand)
             observeCommand.execute(with: self.state)
         }
         
@@ -102,7 +102,7 @@ extension Core {
             id: "remove the observer \(observer) from observers list",
             action: { [weak observeCommand] in
                 guard let observeCommand = observeCommand else { return }
-                self.observers.remove(observeCommand)
+                self.stateObservers.remove(observeCommand)
         })
         
         return stopObservation.async(on: coreDispatchQueue)
@@ -112,7 +112,36 @@ extension Core {
 // MARK: - Middleware -
 extension Core {
     
+    /// Subscribes to observe Actions and the state **before** the change
+    ///
+    /// ```
+    /// core.onAction{ action, state in
+    ///     print(action)
+    /// }
+    /// ```
+    /// - Parameter observe: this closure will be executed whenever the action happened **before** the state change
+    ///
+    /// - Returns: `PlainCommand` to stop observation
+    public func onAction(execute observe: @escaping Middleware) -> PlainCommand {
+        let observeCommand = Command(action: observe)
+        
+        coreDispatchQueue.async {
+            self.actionsObservers.insert(observeCommand)
+        }
+        
+        let stopObservation = PlainCommand(
+            id: "remove the Actions observe: \(observe) from observers list",
+            action:{ [weak observeCommand] in
+                guard let command = observeCommand else { return }
+                self.actionsObservers.remove(command)
+        })
+        
+        return stopObservation.async(on: coreDispatchQueue)
+    }
+    
     /// Adds a middleware to listen to the state and action **before** the state has changed
+    ///
+    /// **Deprecated, please use onAction instead**
     ///
     /// - Parameter middleware: this function will be called every time
     ///                         when action happened **before** the state has changed
@@ -133,21 +162,9 @@ extension Core {
     ///     print(action)
     /// }
     /// ```
+    @available(*, deprecated, renamed: "onAction")
     public func add(middleware: @escaping Middleware) -> PlainCommand {
-        let middlewareCommand = Command(action: middleware)
-        
-        coreDispatchQueue.async {
-            self.middleware.insert(middlewareCommand)
-        }
-        
-        let stopObservation = PlainCommand(
-            id: "remove the middleware \(middleware) from observers list",
-            action:{ [weak middlewareCommand] in
-                guard let command = middlewareCommand else { return }
-                self.middleware.remove(command)
-        })
-        
-        return stopObservation.async(on: coreDispatchQueue)
+        return onAction(execute: middleware)
     }
 }
 
