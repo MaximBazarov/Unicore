@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'Unicore'
-  s.version = '1.0.1'
+  s.version = '1.0.2'
   s.swift_version = '4.2'
   s.license = 'MIT'
   s.summary = 'The Unicore is an application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and redux.js ideas. The framework itself provides you with a convenient way to apply this approach to your app.'
