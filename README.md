@@ -78,10 +78,10 @@ That's why we use the `Event Bus` pattern to solve this, and we dispatch actions
 `Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want.
 
 ```swift
-    let core = Core<AppState>( // #1
-        state: AppState.initial, // #2
-        reducer: reduce // #3
-    )
+let core = Core<AppState>( // #1
+    state: AppState.initial, // #2
+    reducer: reduce // #3
+)
 ```
 1. Set the generic parameter to `AppState` to let `Core` knows that we need a reducer which deals with `AppState` as a state.
 2. Providing `Core` with the initial state
