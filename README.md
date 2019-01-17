@@ -179,8 +179,7 @@ func reduce(_ old: AppState, with action: Action) -> AppState {
 }
 ```
 
-1. A wildcard used  because we don't need a payload
-2. We calculate a new value for `counter`
+1. We calculate a new value for `counter`
 
 And tests would look something like this:
 
