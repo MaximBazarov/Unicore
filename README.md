@@ -6,22 +6,22 @@
 
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
-The Unicore is a highly scalable application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and redux.js ideas. 
+The Unicore is a highly scalable application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and [Redux JS](https://redux.js.org/) ideas.
 
 The framework itself provides you with a convenient way to apply this approach to your app.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Design Approach](#design-approach)
     - [App State](#app-state)
-    - [Core](#core)  
+    - [Core](#core)
     - [Actions](#actions)
-    - [Reducer](#reducer)  
+    - [Reducer](#reducer)
 - [Framework API](#api-and-usage)
   - [Create Core](#create-core)
-  - [Dispatch](#dispatch)  
-  - [Subsribe](#subscribe)  
+  - [Dispatch](#dispatch)
+  - [Subsribe](#subscribe)
   - [Register Middleware](#register-middleware)
-  - [Dispose](#dispose)  
+  - [Dispose](#dispose)
 - [Examples](#examples)
 - [Credits](#credits)
 - [License](#license)
@@ -40,7 +40,7 @@ Unicore is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Unicore'
+pod 'Unicore', '~> 1.0.2'
 ```
 
 
@@ -59,7 +59,7 @@ struct AppState {
     let counter: Int
     let step: Int
 
-    // Initial state 
+    // Initial state
     static let initial = AppState(counter: 0, step: 1)
 }
 ```
@@ -99,7 +99,7 @@ The name of the action describes what has happened, and fields of the action (pa
 struct StepChangeRequested: Action {
     let step: Int
 }
-```      
+```
 means that step change was requested and the new step requested to be equal to field `step`.
 
 Some actions might contain no fields and the only information they bring is the name of the action.
@@ -107,7 +107,7 @@ Some actions might contain no fields and the only information they bring is the 
 struct CounterIncreaseRequested: Action {}
 struct CounterDecreaseRequested: Action {}
 
-```      
+```
 
 These actions give us information that an increase or decrease of the counter was requested.
 
@@ -119,23 +119,24 @@ A Reducer is a function which gets a state and action as a parameter and returns
 And reducers are the only way to change the current state, for example, let's change the step if the action is `StepChangeRequested` then we update the step with the payload value:
 
 ```swift
-func reduce(_ old: AppState, with action: Action) -> AppState {    
+func reduce(_ old: AppState, with action: Action) -> AppState {
     switch action {
-        
+
     case let payload as StepChangeRequested: // #1
         return AppState( // # 2
             counter: old.counter, // #3
             step: payload.step // #4
         )
 
-    default:return old // #5
-    } 
+    default:
+        return old // #5
+    }
 }
 ```
-1. Unwrap `payload` if action is `StepChangeRequested` 
+1. Unwrap `payload` if action is `StepChangeRequested`
 2. Return new instance of `AppState`
 3. `counter` value stays the same
-4. `step` updates with the new value from `payload` 
+4. `step` updates with the new value from `payload`
 5. for all other actions returns the old state
 
 Test of this reducer might be something like this:
@@ -153,26 +154,27 @@ Let's also add handlers for an increase and decrease actions:
 ```swift
 func reduce(_ old: AppState, with action: Action) -> AppState {
     switch action {
-        
+
     case let payload as StepChangeRequested:
         return AppState(
             counter: old.counter,
             step: payload.step
         )
 
-    case _ as CounterIncreaseRequested: // #1
+    case is CounterIncreaseRequested:
         return AppState(
-            counter: old.counter + old.step, // #2
+            counter: old.counter + old.step, // #1
             step: old.step
         )
 
-    case _ as CounterDecreaseRequested:
+    case is CounterDecreaseRequested:
         return AppState(
             counter: old.counter - old.step,
             step: old.step
         )
 
-    default:return old
+    default:
+        return old
     }
 }
 ```
@@ -183,7 +185,6 @@ func reduce(_ old: AppState, with action: Action) -> AppState {
 And tests would look something like this:
 
 ```swift
-
 func testReducer_CounterIncreaseRequested_counterMustBeIncreased() {
     let sut = AppState(counter: 0, step: 3)
     let action = CounterIncreaseRequested()
@@ -206,7 +207,7 @@ Alright, we prepare everything we need for making the application working, the o
 
 ## Create Core
 
-To use Unicore you have to create a `Core` class instance.    
+To use Unicore you have to create a `Core` class instance.
 Since `Core` is a generic type, before that you have to define `State` class, it might be of any type you want. Let's say we have our state described as a structure [App State](#app-state), then you need to describe how this state is going to react to actions using a [Reducer](#reducer), now you good to go and you can create an instance of the `Core`:
 ```swift
 let core = Core<AppState>(state: AppState.initial, reducer: reducer)
@@ -227,14 +228,14 @@ core.dispatch(action) // #2
 ## Subscribe
 The only way to get the current state is to subscribe to the state changes, **it's very important to know that you'll receive the current state value immediately when you subscribe**:
 ```swift
-sut.observe { state in
+core.observe { state in
     // do something with state
     print(state.counter)
 }.dispose(on: disposer) // dispose the subscription when current disposer will dispose
 ```
 The closure will be called whenever the state updates.
 
-If you want to handle state updates on a particular thread, e.g. main thread to update your screen, you can use 
+If you want to handle state updates on a particular thread, e.g. main thread to update your screen, you can use
 `observe(on: DispatchQueue)` syntax:
 
 ```swift
@@ -249,13 +250,13 @@ When you subscribe to the state changes, the function `observe` returns a `Plain
 ```swift
 class YourClass {
     let unsubscribe: PlainCommand?
-    
+
     func connect(to core: Core<AppState>) {
         unsubscribe = core.observe { (state) in
             // handle the state
         }
     }
-    
+
     deinit {
         unsubscribe?()
     }
@@ -263,11 +264,11 @@ class YourClass {
 ```
 
 Or you can use a `Disposer` and add this command to it. A disposer will call this command when it will dispose:
- 
+
 ```swift
 class YourClass {
     let disposer = Disposer()
-    
+
     func connect(to core: Core<AppState>) {
         core.observe { (state) in
             // handle the state
@@ -286,7 +287,7 @@ core.add(middleware: { (state, action) in
         // if action is ScreenShown then track that screen has been shown
         // using screen name from action and application state at the moment
         tracker.trackScreenShown(payload.name, counter: state.counter)
-    } 
+    }
 }).dispose(on: disposer)
 ```
 
@@ -298,30 +299,30 @@ core.add(middleware: { (state, action) in
 Commands are the wrappers on swift closures with a convenient API to dispatch and bind them to values.
 
 ### Initialization
-`Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`. 
+`Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`.
 
 ```swift
-let c = Command<Int>(action: { value in
+let commandInt = Command<Int>(action: { value in
     print(value)
 })
 ```
-or shorter the same 
+or shorter the same
 
 ```swift
-let c = Command<Int>{ value in
+let commandInt = Command<Int> { value in
     print(value)
 }
 ```
-you can also specify a debug description values to have a hint when debugging 
+you can also specify a debug description values to have a hint when debugging
 ```swift
-let c = Command<Int>.init(id: "Print the int") { (value) in
+let commandInt = Command<Int>.init(id: "Print the int") { (value) in
     print(value)
 }
 ```
 ![Command Debug Preview](Docs/img/command-debug.png)
 
 ### Execution
-When you have done with the command setup you execute it as a function with a particular value:  
+When you have done with the command setup you execute it as a function with a particular value:
 ```swift
 commandInt(with: 7)
 ```
@@ -330,7 +331,7 @@ commandInt(with: 7)
 `PlainCommand` is a type alias for `Command<Void>` it can be executed as a function `plainCommand()` without a parameter.
 
 ### Binding to value
-If you want to bind a comand with a value you can use convenient method `.bound(to:)` e.g. 
+If you want to bind a comand with a value you can use convenient method `.bound(to:)` e.g.
 ```swift
 let printInt = Command<Int>{ value in
   print(value)
@@ -343,9 +344,10 @@ this will return a `PlainCommand` with `7` as a value, so when you will execute 
 ```swift
 printSeven()
 ```
+
 ### Dispatching
-when you want the command to be executed only on a particular thread (queue), you can also set this by using
-`async(on:)` syntax
+when you want the command to be executed only on a particular thread (queue), you can also set this by using `async(on:)` syntax
+
 ```swift
 let printSevenOnMain = printSeven.async(on: .main)
 ```
@@ -356,7 +358,7 @@ now wherever you execute this command, it will be executed on the main thread.
 
 [Counter Example](https://github.com/Unicore/Counter)
 
-TheMovieDB.org client (Work In Progress)
+[TheMovieDB.org Client](https://github.com/Unicore/TheMovieDB) (Work In Progress)
 
 # Credits
 
@@ -370,4 +372,4 @@ TheMovieDB.org client (Work In Progress)
 
 # License
 
-Unicore is available under the MIT license. See the LICENSE file for more info.
+Unicore is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
