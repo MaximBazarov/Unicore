@@ -277,20 +277,6 @@ class YourClass {
 }
 ```
 
-## Register Middleware
-Middleware is supposed to help you to observe the state changes along with the action happened, and it might be useful when you want to track events to your analytics:
-
-```swift
-core.add(middleware: { (state, action) in
-    if let payload = action as? ScreenShown {
-        // if action is ScreenShown then track that screen has been shown
-        // using screen name from action and application state at the moment
-        tracker.trackScreenShown(payload.name, counter: state.counter)
-    }
-}).dispose(on: disposer)
-```
-
-
 # Utilities
 
 ## Command
