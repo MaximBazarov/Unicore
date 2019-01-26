@@ -25,9 +25,6 @@
 
 import Foundation
 
-/// Marker protocol to keep actions list open
-public protocol Action {}
-
 /// The Core, is a dispatcher and a state keeper
 ///
 /// Main part of the unicore

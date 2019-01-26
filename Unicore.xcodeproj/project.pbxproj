@@ -11,6 +11,7 @@
 		D2B3C38521BD80DF00E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
 		D2B3C38621BD80DF00E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
 		D2B3C38721BD80E000E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
+		E1F4417821FC4AA7006F4A01 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
 		FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE23057D20CFF0E5000E4355 /* Unicore.framework */; };
 		FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		D2B3C38321BD80B000E246BE /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		E1F4417621FC4AA7006F4A01 /* Markers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
 		FE23057D20CFF0E5000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE23058120CFF0E5000E4355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				FE23060020CFF8A1000E4355 /* Core.swift */,
+				E1F4417621FC4AA7006F4A01 /* Markers.swift */,
 				FE23060D20CFF9A7000E4355 /* Reducer.swift */,
 				FE5668F42177098E0055DEF1 /* Command.swift */,
 				FE5668F921770D150055DEF1 /* Disposer.swift */,
@@ -496,6 +499,7 @@
 				FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */,
 				FE5668F52177098F0055DEF1 /* Command.swift in Sources */,
 				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
+				E1F4417821FC4AA7006F4A01 /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
