@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E72203421FD1D4D0083D9A0 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
+		7E72203521FD1D4D0083D9A0 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
+		7E72203621FD1D4E0083D9A0 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
 		D2B3C38421BD80B000E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
 		D2B3C38521BD80DF00E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
 		D2B3C38621BD80DF00E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
@@ -522,6 +525,7 @@
 				FE5668F62177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
 				FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */,
+				7E72203421FD1D4D0083D9A0 /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +539,7 @@
 				FE5668F72177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
 				FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
+				7E72203521FD1D4D0083D9A0 /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +571,7 @@
 				FE5668F82177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
 				FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
+				7E72203621FD1D4E0083D9A0 /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
