@@ -29,7 +29,7 @@ The framework itself provides you with a convenient way to apply this approach t
 
 # Requirements
 
-* iOS: 9.0 +
+* iOS: 10.3.1 +
 * macOS: 10.10 +
 * watchOS 2.0 +
 * tvOS: 9.0 +
