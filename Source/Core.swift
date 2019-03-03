@@ -142,3 +142,76 @@ extension Core {
     }
 }
 
+
+// MARK: - Command -
+
+class CommandOf<T> {
+    
+    let action: (T) -> () // underlying closure
+    
+    // Block of `context` defined variables. Allows Command to be debugged
+    private let file: StaticString
+    private let function: StaticString
+    private let line: Int
+    private let id: String
+    
+    init(id: String = "unnamed",
+         file: StaticString = #file,
+         function: StaticString = #function,
+         line: Int = #line,
+         action: @escaping (T) -> ()) {
+        self.id = id
+        self.action = action
+        self.function = function
+        self.file = file
+        self.line = line
+    }
+    
+    func execute(with value: T) {
+        action(value)
+    }
+    
+    /// Support for Xcode quick look feature.
+    @objc func debugQuickLookObject() -> AnyObject? {
+        return debugDescription as NSString
+    }
+    
+}
+
+extension CommandOf: CustomDebugStringConvertible {
+    
+    var debugDescription: String {
+        return """
+        \(String(describing: type(of: self))) id: \(id)
+        \tfile: \(file)
+        \tfunction: \(function)
+        \tline: \(line)
+        """
+    }
+    
+}
+
+extension CommandOf {
+    
+    func async(on queue: DispatchQueue) -> CommandOf {
+        return CommandOf { value in
+            queue.async {
+                self.execute(with: value)
+            }
+        }
+    }
+}
+
+/// Allows PlainCommands to be compared and stored in sets and dicts.
+/// Uses `ObjectIdentifier` to distinguish between PlainCommands
+extension CommandOf: Hashable, Equatable {
+    static
+        func ==(left: CommandOf, right: CommandOf) -> Bool {
+        return ObjectIdentifier(left) == ObjectIdentifier(right)
+    }
+    
+    var hashValue: Int { return ObjectIdentifier(self).hashValue }
+}
+
+typealias PlainCommand = CommandOf<Void>
+

@@ -17,10 +17,6 @@
 		FE23060920CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FE23060B20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FE23060C20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FE5668F52177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
-		FE5668F62177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
-		FE5668F72177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
-		FE5668F82177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
 		FE56690021770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
 		FE56690121770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
@@ -72,7 +68,6 @@
 		FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305F820CFF3C6000E4355 /* tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
 		FE23060020CFF8A1000E4355 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		FE5668F42177098E0055DEF1 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		FE5668F921770D150055DEF1 /* Disposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
 		FE566903217719EC0055DEF1 /* DisposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
 		FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				FE23060020CFF8A1000E4355 /* Core.swift */,
-				FE5668F42177098E0055DEF1 /* Command.swift */,
 				FE5668F921770D150055DEF1 /* Disposer.swift */,
 			);
 			path = Source;
@@ -478,7 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060920CFF8A1000E4355 /* Core.swift in Sources */,
-				FE5668F52177098F0055DEF1 /* Command.swift in Sources */,
 				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +491,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060B20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE5668F62177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,7 +500,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060C20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE5668F72177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,7 +529,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */,
-				FE5668F82177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
