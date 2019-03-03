@@ -24,6 +24,70 @@
 
 
 
+public class Disposable {
+    
+    private let disposeCommand: () -> () // underlying closure
+    
+    // Block of `context` defined variables. Allows Command to be debugged
+    private let file: StaticString
+    private let function: StaticString
+    private let line: Int
+    private let id: String
+    
+    init(id: String = "Dispose Command",
+         file: StaticString = #file,
+         function: StaticString = #function,
+         line: Int = #line,
+         action: @escaping () -> ()) {
+        self.id = id
+        self.disposeCommand = action
+        self.function = function
+        self.file = file
+        self.line = line
+    }
+    
+    func dispose() {
+        disposeCommand()
+    }
+    
+    /// Adds this command to be disposed on disposer deinit
+    ///
+    /// - Parameter disposer: disposer
+    func dispose(on disposer: Disposer) {
+        disposer.add(disposal: self)
+    }
+    
+    /// Support for Xcode quick look feature.
+    @objc func debugQuickLookObject() -> AnyObject? {
+        return debugDescription as NSString
+    }
+}
+
+extension Disposable: CustomDebugStringConvertible {
+    
+    public var debugDescription: String {
+        return """
+        \(String(describing: type(of: self))) id: \(id)
+        \tfile: \(file)
+        \tfunction: \(function)
+        \tline: \(line)
+        """
+    }
+    
+}
+
+extension Disposable {
+    
+    func async(on queue: DispatchQueue) -> Disposable {
+        return Disposable {
+            queue.async {
+                self.dispose()
+            }
+        }
+    }
+}
+
+
 /// Convenient object to add to your class in case you want to dispose of your subscriptions on deinit.
 ///
 /// **Usage**
@@ -46,15 +110,14 @@
 public
 final class Disposer {
     
-    private var disposals: [PlainCommand] = []
+    private var disposals: [Disposable] = []
     private let lockQueue = DispatchQueue(label: "com.unicore.disposer-lock-queue")
-    
     
     /// Adds plain command to be executed when this object deinits
     ///
     /// - Parameter disposal: plain command to execute
     public
-    func add(disposal: PlainCommand) {
+    func add(disposal: Disposable) {
         lockQueue.async {
             self.disposals.append(disposal)
         }
@@ -63,19 +126,6 @@ final class Disposer {
     public init() {}
     
     deinit {
-        disposals.forEach{$0.execute()}
+        disposals.forEach{$0.dispose()}
     }
 }
-
-// MARK: - PlainCommand syntax sugar
-public
-extension Command where T == Void {
-    
-    /// Adds this command to be disposed on disposer deinit
-    ///
-    /// - Parameter disposer: disposer
-    func dispose(on disposer: Disposer) {
-        disposer.add(disposal: self)
-    }
-}
-

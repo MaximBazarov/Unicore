@@ -24,9 +24,7 @@
 
 import Foundation
 
-
-public
-class Command<T> {
+class CommandOf<T> {
     
     let action: (T) -> () // underlying closure
     
@@ -36,7 +34,6 @@ class Command<T> {
     private let line: Int
     private let id: String
     
-    public
     init(id: String = "unnamed",
          file: StaticString = #file,
          function: StaticString = #function,
@@ -49,89 +46,35 @@ class Command<T> {
         self.line = line
     }
     
-    public
     func execute(with value: T) {
         action(value)
     }
     
-    /// Placeholder for do nothing PlainCommand
-    public
-    static var nop: Command { return Command(id: "nop") { _ in } }
-    
     /// Support for Xcode quick look feature.
-    @objc
-    public
-    func debugQuickLookObject() -> AnyObject? {
-       return debugDescription as NSString
+    @objc func debugQuickLookObject() -> AnyObject? {
+        return debugDescription as NSString
     }
+    
 }
 
-extension Command: CustomDebugStringConvertible {
+extension CommandOf: CustomDebugStringConvertible {
     
-    public var debugDescription: String {
+    var debugDescription: String {
         return """
-            \(String(describing: type(of: self))) id: \(id)
-            \tfile: \(file)
-            \tfunction: \(function)
-            \tline: \(line)
-            """
-    }
-
-}
-
-
-// MARK: - Plain (void typed) command
-
-public
-typealias PlainCommand = Command<Void>
-
-public
-extension Command where T == Void {
-    func execute() {
-        execute(with: ())
-    }
-}
-
-/// Allows PlainCommands to be compared and stored in sets and dicts.
-/// Uses `ObjectIdentifier` to distinguish between PlainCommands
-extension Command: Hashable {
-    public static
-    func ==(left: Command, right: Command) -> Bool {
-        return ObjectIdentifier(left) == ObjectIdentifier(right)
+        \(String(describing: type(of: self))) id: \(id)
+        \tfile: \(file)
+        \tfunction: \(function)
+        \tline: \(line)
+        """
     }
     
-    public
-    var hashValue: Int { return ObjectIdentifier(self).hashValue }
 }
 
-// MARK: - Value binding
-public
-extension Command {
-    /// Creates new plain command with value inside
-    ///
-    /// - Parameter value: Value to be bound
-    /// - Returns: PlainCommand with having `value` when executed
-    public
-    func bound(to value: T) -> PlainCommand {
-        return PlainCommand { self.execute(with: value) }
-    }
-}
-
-// MARK: Map
-extension Command {
-    
-    func map<U>(transform: @escaping (U) -> T) -> Command<U> {
-        return Command<U> { value in self.execute(with: transform(value)) }
-    }
-}
-
-// MARK: Queueing
-public
-extension Command {
+extension CommandOf {
     
     public
-    func async(on queue: DispatchQueue) -> Command {
-        return Command { value in
+    func async(on queue: DispatchQueue) -> CommandOf {
+        return CommandOf { value in
             queue.async {
                 self.execute(with: value)
             }
@@ -139,3 +82,16 @@ extension Command {
     }
 }
 
+/// Allows PlainCommands to be compared and stored in sets and dicts.
+/// Uses `ObjectIdentifier` to distinguish between PlainCommands
+extension CommandOf: Hashable, Equatable {
+    public static
+        func ==(left: CommandOf, right: CommandOf) -> Bool {
+        return ObjectIdentifier(left) == ObjectIdentifier(right)
+    }
+    
+    public
+    var hashValue: Int { return ObjectIdentifier(self).hashValue }
+}
+
+typealias PlainCommand = CommandOf<Void>

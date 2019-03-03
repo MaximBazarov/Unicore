@@ -1,6 +1,6 @@
 //
-//  Dispatcher.swift
-//  Unicore
+//  AtomicValue.swift
+//  UnicoreTests
 //
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,8 +21,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+import Foundation
 
-
-protocol Dispatcher {
-    func dispatch(_ action: Action)
+/// Gives your value thread protection
+public final class AtomicValue<T> {
+    
+    public var value: T {
+        get {
+            return lock.sync {
+                return self._value
+            }
+        }
+        
+        set {
+            lock.async {
+                self._value = newValue
+            }
+        }
+    }
+    
+    private let lock = DispatchQueue(label: "code.unicore.atomic-value-lock")
+    private var _value: T
+    
+    public init(_ value: T) {
+        self._value = value
+    }
+    
 }

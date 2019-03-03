@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2B3C38421BD80B000E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
-		D2B3C38521BD80DF00E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
-		D2B3C38621BD80DF00E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
-		D2B3C38721BD80E000E246BE /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C38321BD80B000E246BE /* AtomicValue.swift */; };
-		D2DA047121FC77D600F0C4CA /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
-		D2DA047221FC77D700F0C4CA /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
-		D2DA047321FC77D800F0C4CA /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
-		E1F4417821FC4AA7006F4A01 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4417621FC4AA7006F4A01 /* Markers.swift */; };
+		D263906F222C4507004C4028 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263906E222C4507004C4028 /* AtomicValue.swift */; };
+		D2639070222C453E004C4028 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263906E222C4507004C4028 /* AtomicValue.swift */; };
+		D2639071222C453F004C4028 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263906E222C4507004C4028 /* AtomicValue.swift */; };
 		FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE23057D20CFF0E5000E4355 /* Unicore.framework */; };
 		FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
@@ -22,18 +17,11 @@
 		FE23060920CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FE23060B20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FE23060C20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FE23060E20CFF9A7000E4355 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
-		FE23061020CFF9A7000E4355 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
-		FE23061120CFF9A7000E4355 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
 		FE5668F52177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F62177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F72177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668F82177098F0055DEF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F42177098E0055DEF1 /* Command.swift */; };
 		FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
-		FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
-		FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
-		FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
-		FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668FB21770ED70055DEF1 /* Dispatcher.swift */; };
 		FE56690021770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
 		FE56690121770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
 		FE56690221770F330055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
@@ -43,7 +31,6 @@
 		FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED3CF5820D0477E00AB04C8 /* Unicore.framework */; };
 		FEAD14DD20D04F1300BBBD88 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FEAD14E020D04FD000BBBD88 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060D20CFF9A7000E4355 /* Reducer.swift */; };
 		FEE0831820E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE0831920E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE0831A20E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,8 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D2B3C38321BD80B000E246BE /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
-		E1F4417621FC4AA7006F4A01 /* Markers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
+		D263906E222C4507004C4028 /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
 		FE23057D20CFF0E5000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE23058120CFF0E5000E4355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,10 +72,8 @@
 		FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305F820CFF3C6000E4355 /* tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
 		FE23060020CFF8A1000E4355 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		FE23060D20CFF9A7000E4355 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		FE5668F42177098E0055DEF1 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		FE5668F921770D150055DEF1 /* Disposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
-		FE5668FB21770ED70055DEF1 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		FE566903217719EC0055DEF1 /* DisposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
 		FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED3CF5820D0477E00AB04C8 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,12 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				FE23060020CFF8A1000E4355 /* Core.swift */,
-				E1F4417621FC4AA7006F4A01 /* Markers.swift */,
-				FE23060D20CFF9A7000E4355 /* Reducer.swift */,
 				FE5668F42177098E0055DEF1 /* Command.swift */,
 				FE5668F921770D150055DEF1 /* Disposer.swift */,
-				FE5668FB21770ED70055DEF1 /* Dispatcher.swift */,
-				D2B3C38321BD80B000E246BE /* AtomicValue.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -206,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */,
+				D263906E222C4507004C4028 /* AtomicValue.swift */,
 				FE566903217719EC0055DEF1 /* DisposerTests.swift */,
 			);
 			path = Tests;
@@ -497,12 +478,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060920CFF8A1000E4355 /* Core.swift in Sources */,
-				FE23060E20CFF9A7000E4355 /* Reducer.swift in Sources */,
-				D2B3C38421BD80B000E246BE /* AtomicValue.swift in Sources */,
-				FE5668FC21770ED70055DEF1 /* Dispatcher.swift in Sources */,
 				FE5668F52177098F0055DEF1 /* Command.swift in Sources */,
 				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
-				E1F4417821FC4AA7006F4A01 /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D263906F222C4507004C4028 /* AtomicValue.swift in Sources */,
 				FE566904217719EC0055DEF1 /* DisposerTests.swift in Sources */,
 				FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */,
 			);
@@ -520,12 +498,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060B20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE23061020CFF9A7000E4355 /* Reducer.swift in Sources */,
-				D2B3C38521BD80DF00E246BE /* AtomicValue.swift in Sources */,
 				FE5668F62177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
-				FE5668FD21770F2E0055DEF1 /* Dispatcher.swift in Sources */,
-				D2DA047121FC77D600F0C4CA /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,12 +508,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE23060C20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE23061120CFF9A7000E4355 /* Reducer.swift in Sources */,
-				D2B3C38621BD80DF00E246BE /* AtomicValue.swift in Sources */,
 				FE5668F72177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
-				FE5668FE21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
-				D2DA047221FC77D700F0C4CA /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2639070222C453E004C4028 /* AtomicValue.swift in Sources */,
 				FE56690521771B040055DEF1 /* DisposerTests.swift in Sources */,
 				FE2305FA20CFF445000E4355 /* CoreBasicTests.swift in Sources */,
 			);
@@ -556,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2639071222C453F004C4028 /* AtomicValue.swift in Sources */,
 				FE56690621771B040055DEF1 /* DisposerTests.swift in Sources */,
 				FEAD14DD20D04F1300BBBD88 /* CoreBasicTests.swift in Sources */,
 			);
@@ -566,12 +538,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */,
-				FEAD14E020D04FD000BBBD88 /* Reducer.swift in Sources */,
-				D2B3C38721BD80E000E246BE /* AtomicValue.swift in Sources */,
 				FE5668F82177098F0055DEF1 /* Command.swift in Sources */,
 				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
-				FE5668FF21770F2F0055DEF1 /* Dispatcher.swift in Sources */,
-				D2DA047321FC77D800F0C4CA /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,20 +25,25 @@
 
 import Foundation
 
+protocol Dispatcher {
+    func dispatch(_ action: Action)
+}
+
+public protocol Action {}
+
+public typealias Reducer<State> = (State, Action) -> State
+
 /// The Core, is a dispatcher and a state keeper
 ///
 /// Main part of the unicore
 public final class Core<State> {
     
-    /// Function to be added as
-    public typealias Middleware = (State, Action) -> Void
-    
     private let coreDispatchQueue = DispatchQueue(label: "com.unicore.core-lock-queue")
     
     private var state: State
     private let reducer: Reducer<State>
-    private var actionsObservers: Set<Command<(State, Action)>> = []
-    private var stateObservers:  Set<Command<State>> = []
+    private var actionsObservers: Set<CommandOf<(State, Action)>> = []
+    private var stateObservers:  Set<CommandOf<State>> = []
     
     
     /// Core initialization
@@ -81,13 +86,13 @@ extension Core {
     /// **and when subscribe**
     ///
     /// - Returns: `PlainCommand` to stop observation
-    public func observe(on queue:DispatchQueue? = nil, with observer: @escaping (State) -> Void ) -> PlainCommand {
+    public func observe(on queue:DispatchQueue? = nil, with observer: @escaping (State) -> Void ) -> Disposable {
         
-        var observeCommand: Command<State>
+        var observeCommand: CommandOf<State>
         if let queue = queue {
-            observeCommand = Command(action: observer).async(on: queue)
+            observeCommand = CommandOf(action: observer).async(on: queue)
         } else {
-            observeCommand = Command(action: observer)
+            observeCommand = CommandOf(action: observer)
         }
         
         coreDispatchQueue.async {
@@ -95,7 +100,7 @@ extension Core {
             observeCommand.execute(with: self.state)
         }
         
-        let stopObservation = PlainCommand(
+        let stopObservation = Disposable(
             id: "remove the observer \(observer) from observers list",
             action: { [weak observeCommand] in
                 guard let observeCommand = observeCommand else { return }
@@ -119,14 +124,14 @@ extension Core {
     /// - Parameter observe: this closure will be executed whenever the action happened **before** the state change
     ///
     /// - Returns: `PlainCommand` to stop observation
-    public func onAction(execute observe: @escaping Middleware) -> PlainCommand {
-        let observeCommand = Command(action: observe)
+    public func onAction(execute observe: @escaping (State, Action) -> Void) -> Disposable {
+        let observeCommand = CommandOf(action: observe)
         
         coreDispatchQueue.async {
             self.actionsObservers.insert(observeCommand)
         }
         
-        let stopObservation = PlainCommand(
+        let stopObservation = Disposable(
             id: "remove the Actions observe: \(observe) from observers list",
             action:{ [weak observeCommand] in
                 guard let command = observeCommand else { return }
@@ -134,34 +139,6 @@ extension Core {
         })
         
         return stopObservation.async(on: coreDispatchQueue)
-    }
-    
-    /// Adds a middleware to listen to the state and action **before** the state has changed
-    ///
-    /// **Deprecated, please use onAction instead**
-    ///
-    /// - Parameter middleware: this function will be called every time
-    ///                         when action happened **before** the state has changed
-    ///
-    /// - Returns: `PlainCommand` to stop listening
-    ///
-    /// ```
-    /// let logger: Middleware = { action, state in
-    ///     print(action)
-    /// }
-    ///
-    /// core.add(middleware: logger)
-    /// ```
-    /// or
-    /// ```
-    ///
-    /// core.add{ action, state in
-    ///     print(action)
-    /// }
-    /// ```
-    @available(*, deprecated, renamed: "onAction")
-    public func add(middleware: @escaping Middleware) -> PlainCommand {
-        return onAction(execute: middleware)
     }
 }
 
