@@ -7,26 +7,30 @@
 
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
-[Architecture](#design-approach) | [Installation](#installation) | [Framework API](#api-and-usage) | [FAQ](#faq) | [Examples](#examples) | [Credits](#credits)
+[Architecture](#Architecture) | [Installation](#installation) | [Framework API](#api-and-usage) | [FAQ](#faq) | [Examples](#examples) | [Credits](#credits)
 
 iOS: 9.0 + | macOS: 10.10 + | watchOS 2.0 + | tvOS: 9.0 +
 ___
 
+The Unicore is a highly scalable **application design approach** (architecture) which lets you increase the maintainability of an application, increase testability, and give your team the flexibility by decoupling code of an application.
 
-The Unicore is a highly scalable **application design approach** (architecture) which lets you increase the maintainability of an application, increase testability, and give your team the flexibility by decoupling code of an application. 
+It is a convenient combination of the **data-driven components** and a **unidirectional dataflow**. 
 
-It is a convenient combination of the **data-driven** and a **unidirectional dataflow**. 
+![Unicore](Docs/img/unicore-minimal.png)
 
+# Architecture
 
+## Data-driven components
 
-The framework itself provides you the convenient way to manage the `State`. It's based on [Redux JS](https://redux.js.org/) ideas.
+TBD: 
 
+## Unidirectional dataflow
 
-# Design Approach
+The framework itself provides you the convenient way to manage the `State` it's `Core` on the picture below.
+
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
-![Unicore](Docs/img/unicore-minimal.png)
 
 ## App State
 
@@ -198,10 +202,17 @@ github "Unicore/Unicore"
 ```
 
 
-
 # API and Usage
 
-## Create Core
+* `Action`
+* `Core`
+    * `observe(on:with:)`
+    * `dispatch(_ action:)`
+    * `onAction(execute:)`
+* `Disposer` and `Disposable`
+    * `dispose(on:)`
+
+## Core
 
 To use Unicore you have to create a `Core` class instance.
 Since `Core` is a generic type, before that you have to define `State` class, it might be of any type you want. Let's say we have our state described as a structure [App State](#app-state), then you need to describe how this state is going to react to actions using a [Reducer](#reducer), now you good to go and you can create an instance of the `Core`:
@@ -209,7 +220,7 @@ Since `Core` is a generic type, before that you have to define `State` class, it
 let core = Core<AppState>(state: AppState.initial, reducer: reducer)
 ```
 
-## Subscribe
+### `observe(on:with:)`
 
 The only way to get the current state is to subscribe to the state changes, **it's very important to know that you'll receive the current state value immediately when you subscribe**:
 
@@ -231,16 +242,17 @@ core.observe(on: .main) { (state) in
 }.dispose(on: disposer)
 ```
 
-## Dispatch
-
+### `dispatch(_ action:)`
 
 ```swift
 let action = CounterIncreaseRequested() // #1
 core.dispatch(action) // #2
 ```
 
-## Dispose
+### `onAction(execute:)`
+Subscribes to observe Actions and the old State **before** the change when action has happened. Recommended using only for debugging purposes.
 
+## Dispose
 When you subscribe to the state changes, the function `observe` returns a `PlainCommand` to remove the subscription when it's no longer needed. You can call it directly when you want to unsubscribe:
 ```swift
 class YourClass {
@@ -272,15 +284,6 @@ class YourClass {
     }
 }
 ```
-
-### Dispatching
-when you want the command to be executed only on a particular thread (queue), you can also set this by using `async(on:)` syntax
-
-```swift
-let printSevenOnMain = printSeven.async(on: .main)
-```
-
-now wherever you execute this command, it will be executed on the main thread.
 
 # Examples
 
