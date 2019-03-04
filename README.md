@@ -26,7 +26,7 @@ The framework itself provides you the convenient way to manage the `State`. It's
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
-![Unicore](Docs/img/unicore-minimal-framework.png)
+![Unicore](Docs/img/unicore-minimal.png)
 
 ## App State
 
