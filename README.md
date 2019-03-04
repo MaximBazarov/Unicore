@@ -7,57 +7,26 @@
 
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
-The Unicore is a highly scalable application design approach which lets you increase the reliability of an application, increase testability, and give your team the flexibility by decoupling code of an application. It is a convenient combination of the data-driven and [Redux JS](https://redux.js.org/) ideas.
+[Architecture](#design-approach) | [Installation](#installation) | [Framework API](#api-and-usage) | [FAQ](#faq) | [Examples](#examples) | [Credits](#credits)
 
-The framework itself provides you with a convenient way to apply this approach to your app.
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Design Approach](#design-approach)
-    - [App State](#app-state)
-    - [Core](#core)
-    - [Actions](#actions)
-    - [Reducer](#reducer)
-- [Framework API](#api-and-usage)
-  - [Create Core](#create-core)
-  - [Dispatch](#dispatch)
-  - [Subsribe](#subscribe)
-  - [Register Middleware](#register-middleware)
-  - [Dispose](#dispose)
-- [Examples](#examples)
-- [Credits](#credits)
-- [License](#license)
+iOS: 9.0 + | macOS: 10.10 + | watchOS 2.0 + | tvOS: 9.0 +
+___
 
 
-# Requirements
+The Unicore is a highly scalable **application design approach** (architecture) which lets you increase the maintainability of an application, increase testability, and give your team the flexibility by decoupling code of an application. 
 
-* iOS: 10.3.1 +
-* macOS: 10.10 +
-* watchOS 2.0 +
-* tvOS: 9.0 +
+It is a convenient combination of the **data-driven** and a **unidirectional dataflow**. 
 
-# Installation
 
-Unicore is available through [CocoaPods](https://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). To install
-it, simply add
 
-## Cocoapods
-the following line to your Podfile:
-```ruby
-pod 'Unicore', '~> 1.0.2'
-```
-
-## Carthage 
-or the following line to your Cartfile:
-```sh
-github "Unicore/Unicore"
-```
+The framework itself provides you the convenient way to manage the `State`. It's based on [Redux JS](https://redux.js.org/) ideas.
 
 
 # Design Approach
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
-![Unicore](Docs/img/unicore-min.svg)
+![Unicore](Docs/img/unicore-minimal-framework.png)
 
 ## App State
 
@@ -211,6 +180,25 @@ func testReducer_CounterDecreaseRequested_counterMustBeDecreased() {
 Alright, we prepare everything we need for making the application working, the only thing needed is to create our `Core` instance:
 
 
+# Installation
+
+Unicore is available through [CocoaPods](https://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). To install
+it, simply add
+
+## Cocoapods
+the following line to your Podfile:
+```ruby
+pod 'Unicore', '~> 1.0.2'
+```
+
+## Carthage 
+or the following line to your Cartfile:
+```sh
+github "Unicore/Unicore"
+```
+
+
+
 # API and Usage
 
 ## Create Core
@@ -221,26 +209,17 @@ Since `Core` is a generic type, before that you have to define `State` class, it
 let core = Core<AppState>(state: AppState.initial, reducer: reducer)
 ```
 
-That's it we good to go, now we can dispatch an `Action` to modify our state or subscribe to state changes.
-
-
-## Dispatch
-
-
-```swift
-let action = CounterIncreaseRequested() // #1
-core.dispatch(action) // #2
-```
-
-
 ## Subscribe
+
 The only way to get the current state is to subscribe to the state changes, **it's very important to know that you'll receive the current state value immediately when you subscribe**:
+
 ```swift
 core.observe { state in
     // do something with state
     print(state.counter)
 }.dispose(on: disposer) // dispose the subscription when current disposer will dispose
 ```
+
 The closure will be called whenever the state updates.
 
 If you want to handle state updates on a particular thread, e.g. main thread to update your screen, you can use
@@ -250,6 +229,14 @@ If you want to handle state updates on a particular thread, e.g. main thread to 
 core.observe(on: .main) { (state) in
     self.counterLabel.text = String(state.counter)
 }.dispose(on: disposer)
+```
+
+## Dispatch
+
+
+```swift
+let action = CounterIncreaseRequested() // #1
+core.dispatch(action) // #2
 ```
 
 ## Dispose
@@ -286,59 +273,6 @@ class YourClass {
 }
 ```
 
-# Utilities
-
-## Command
-
-Commands are the wrappers on swift closures with a convenient API to dispatch and bind them to values.
-
-### Initialization
-`Command` is a generic type which uses `Value` as a type constraint `Command<Int>`  would be equivalent to `(Int) -> Void`.
-
-```swift
-let commandInt = Command<Int>(action: { value in
-    print(value)
-})
-```
-or shorter the same
-
-```swift
-let commandInt = Command<Int> { value in
-    print(value)
-}
-```
-you can also specify a debug description values to have a hint when debugging
-```swift
-let commandInt = Command<Int>.init(id: "Print the int") { (value) in
-    print(value)
-}
-```
-![Command Debug Preview](Docs/img/command-debug.png)
-
-### Execution
-When you have done with the command setup you execute it as a function with a particular value:
-```swift
-commandInt(with: 7)
-```
-
-### PlainCommand
-`PlainCommand` is a type alias for `Command<Void>` it can be executed as a function `plainCommand()` without a parameter.
-
-### Binding to value
-If you want to bind a comand with a value you can use convenient method `.bound(to:)` e.g.
-```swift
-let printInt = Command<Int>{ value in
-  print(value)
-}
-
-let printSeven = printInt.bound(to: 7)
-```
-this will return a `PlainCommand` with `7` as a value, so when you will execute it, you no longer have to provide a value:
-
-```swift
-printSeven()
-```
-
 ### Dispatching
 when you want the command to be executed only on a particular thread (queue), you can also set this by using `async(on:)` syntax
 
@@ -350,9 +284,7 @@ now wherever you execute this command, it will be executed on the main thread.
 
 # Examples
 
-[Counter Example](https://github.com/Unicore/Counter)
-
-[TheMovieDB.org Client](https://github.com/Unicore/TheMovieDB) (Work In Progress)
+[TheMovieDB.org Client](https://github.com/MaximBazarov/TheMovieDB-Unicore) (Work In Progress)
 
 # Credits
 
@@ -362,8 +294,5 @@ now wherever you execute this command, it will be executed on the main thread.
 
 [Redux JS](https://redux.js.org/): The original idea.
 
-
-
 # License
-
 Unicore is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

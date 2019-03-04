@@ -25,45 +25,44 @@
 
 import Foundation
 
-protocol Dispatcher {
-    func dispatch(_ action: Action)
-}
 
+// MARK: - Protocols -
+
+
+/// Action is a marker protocol.
+/// It's better to know that you will receive an Action rather than Any
+/// Also, it's easy to understand where the struct is marked as an Action
 public protocol Action {}
 
-public typealias Reducer<State> = (State, Action) -> State
+// MARK: - Core -
 
-/// The Core, is a dispatcher and a state keeper
+/// The Core is the simple State manager.
+/// There is no way to obtain the current state by accessing a Core's field.
+/// The only way to get the state is to subscribe to the State's updates.
+/// And the only way to mutate the State is to dispatch an Action.
 ///
-/// Main part of the unicore
+/// After action got dispatched, the core will get the new instance of the State by calling the reducer with the current state and an action.
+/// ```
+/// state = reducer(state, action)
+/// ```
+/// And then the Core will notify all the subscribers with the new State.
 public final class Core<State> {
     
     private let coreDispatchQueue = DispatchQueue(label: "com.unicore.core-lock-queue")
     
     private var state: State
-    private let reducer: Reducer<State>
+    private let reducer: (State, Action) -> State
     private var actionsObservers: Set<CommandOf<(State, Action)>> = []
     private var stateObservers:  Set<CommandOf<State>> = []
     
-    
-    /// Core initialization
-    ///
-    /// - Parameters:
-    ///   - state: initial state
-    ///   - reducer: function to obtain a new state regarding action
-    public init(state: State, reducer: @escaping Reducer<State>) {
+    public init(state: State, reducer: @escaping (State, Action) -> State) {
         self.state = state
         self.reducer = reducer
     }
     
-}
-
-extension Core: Dispatcher {
-    
-    /// This method is the only way mutate the state.
-    /// But instead of mutating directly, the action must be dispatched.
-    /// After that mutator will be applied to the current state producing its new version applying the action.
-    /// And then every subscriber will be notified with the new version of the state.
+    /// The only way to mutate the State is to dispatch an Action.
+    /// After action got dispatched, the core will get the new instance of the State by calling the reducer with the current state and an action.
+    /// Then the Core will notify all the subscribers with the new State.
     ///
     /// - Parameter action: Action regarding which state must be mutated.
     public func dispatch(_ action: Action) {
@@ -74,18 +73,11 @@ extension Core: Dispatcher {
         }
     }
     
-}
-
-// MARK: - Observable -
-extension Core {
-    
-    
-    /// Subscribe component to observe the state **after** each change
+    /// Subscribe a component to observe the state **after** each change
     ///
-    /// - Parameter command: this command will be called every time **after** state has changed
-    /// **and when subscribe**
+    /// - Parameter observer: this closure will be called **when subscribe** and every time **after** state has changed.
     ///
-    /// - Returns: `PlainCommand` to stop observation
+    /// - Returns: A `Disposable`, to stop observation call .dispose() on it, or add it to a `Disposer`
     public func observe(on queue:DispatchQueue? = nil, with observer: @escaping (State) -> Void ) -> Disposable {
         
         var observeCommand: CommandOf<State>
@@ -109,13 +101,9 @@ extension Core {
         
         return stopObservation.async(on: coreDispatchQueue)
     }
-}
-
-// MARK: - Middleware -
-extension Core {
     
-    /// Subscribes to observe Actions and the state **before** the change
-    ///
+    /// Subscribes to observe Actions and the old State **before** the change when action has happened.
+    /// Recommended using only for debugging purposes.
     /// ```
     /// core.onAction{ action, state in
     ///     print(action)
@@ -123,7 +111,7 @@ extension Core {
     /// ```
     /// - Parameter observe: this closure will be executed whenever the action happened **before** the state change
     ///
-    /// - Returns: `PlainCommand` to stop observation
+    /// - Returns: A `Disposable`, to stop observation call .dispose() on it, or add it to a `Disposer`
     public func onAction(execute observe: @escaping (State, Action) -> Void) -> Disposable {
         let observeCommand = CommandOf(action: observe)
         
@@ -142,9 +130,11 @@ extension Core {
     }
 }
 
+// MARK: - Utils -
+// MARK: - Command
 
-// MARK: - Command -
 
+/// Commands are the simple wrappers over closures which allow us to have a context when debug.
 class CommandOf<T> {
     
     let action: (T) -> () // underlying closure
@@ -202,8 +192,8 @@ extension CommandOf {
     }
 }
 
-/// Allows PlainCommands to be compared and stored in sets and dicts.
-/// Uses `ObjectIdentifier` to distinguish between PlainCommands
+/// Allows Command to be compared and stored in sets and dicts.
+/// Uses `ObjectIdentifier` to distinguish between Commands
 extension CommandOf: Hashable, Equatable {
     static
         func ==(left: CommandOf, right: CommandOf) -> Bool {
@@ -212,6 +202,4 @@ extension CommandOf: Hashable, Equatable {
     
     var hashValue: Int { return ObjectIdentifier(self).hashValue }
 }
-
-typealias PlainCommand = CommandOf<Void>
 

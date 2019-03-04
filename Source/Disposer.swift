@@ -23,12 +23,12 @@
 //
 
 
-
+/// Disposable are the simple wrappers over closures which allow us to have a context when debug.
 public class Disposable {
     
     private let disposeCommand: () -> () // underlying closure
     
-    // Block of `context` defined variables. Allows Command to be debugged
+    // Block of `context` defined variables. Allows Disposable to be debugged
     private let file: StaticString
     private let function: StaticString
     private let line: Int
@@ -50,9 +50,9 @@ public class Disposable {
         disposeCommand()
     }
     
-    /// Adds this command to be disposed on disposer deinit
+    /// Adds the `Disposable` to be disposed on the `Disposer` deinit
     ///
-    /// - Parameter disposer: disposer
+    /// - Parameter disposer: `Disposer`
     func dispose(on disposer: Disposer) {
         disposer.add(disposal: self)
     }
@@ -107,15 +107,14 @@ extension Disposable {
 ///     }
 /// }
 /// ```
-public
-final class Disposer {
+public final class Disposer {
     
     private var disposals: [Disposable] = []
     private let lockQueue = DispatchQueue(label: "com.unicore.disposer-lock-queue")
     
-    /// Adds plain command to be executed when this object deinits
+    /// Adds Disposable to be disposed when this object deinits
     ///
-    /// - Parameter disposal: plain command to execute
+    /// - Parameter disposal: Disposable to execute `.dispose()`
     public
     func add(disposal: Disposable) {
         lockQueue.async {
