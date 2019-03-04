@@ -16,6 +16,8 @@ The Unicore is a highly scalable **application design approach** (architecture) 
 
 It is a convenient combination of the **data-driven components** and a **unidirectional dataflow**. 
 
+**The framework itself provides you the convenient way to manage an app state. It's `Core` on the picture below.**
+
 ![Unicore](Docs/img/unicore-minimal.png)
 
 # Architecture
@@ -26,13 +28,12 @@ TBD:
 
 ## Unidirectional dataflow
 
-The framework itself provides you the convenient way to manage the `State` it's `Core` on the picture below.
 
 
 The idea behind the Unicore is to have one *single source of truth* (app state) and make changes in a *unidirectional* manner.
 
 
-## App State
+### App State
 
 The app state would be that source it's a plain structure. For example simple structure like this:
 
@@ -55,7 +56,7 @@ But the problem here would be to give access to that state for each part of the 
 That's why we use the `Event Bus` pattern to solve this, and we dispatch actions to the [Core](#core) which would mutate the state.
 
 
-## Core
+### Core
 
 `Core` is a dispatcher of the action, it uses the serial queue beneath so only one action gets handled at once that is why it is so important to not block a reducer function. `Core` is a generic type, so we can create it for any state we want.
 
