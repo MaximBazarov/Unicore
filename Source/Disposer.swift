@@ -53,7 +53,7 @@ public class Disposable {
     /// Adds the `Disposable` to be disposed on the `Disposer` deinit
     ///
     /// - Parameter disposer: `Disposer`
-    func dispose(on disposer: Disposer) {
+    public func dispose(on disposer: Disposer) {
         disposer.add(disposal: self)
     }
     
