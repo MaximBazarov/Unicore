@@ -23,7 +23,7 @@ It is a convenient combination of the **data-driven components** and a **unidire
 - **Reducer** is a pure function `(State, Action) -> State`
 - **Core** is a Redux like `State` keeper which allows you to `dispatch` `Action`s to it and `observe` the `State` changes
 - **Connector** is a pure function `(State) -> Props`, where `Props` is a structure what `Component`s need to do their job
-- **Component** is a `Props` consumer which provides side-effects like Screens, API Services, Core Location Managers, etc...
+- **Component** is a `Props` consumer (Screens, API Services, Core Location Managers, etc...) which provides side-effects 
 
 
 # Architecture
