@@ -22,6 +22,8 @@
 //  THE SOFTWARE.
 //
 
+import Dispatch
+import Foundation
 
 /// Disposable are the simple wrappers over closures which allow us to have a context when debug.
 public class Disposable {

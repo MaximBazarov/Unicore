@@ -93,7 +93,7 @@ public final class Core<State> {
         }
         
         let stopObservation = Disposable(
-            id: "remove the observer \(observer) from observers list",
+            id: "remove the observer \(String(describing: observer)) from observers list",
             action: { [weak observeCommand] in
                 guard let observeCommand = observeCommand else { return }
                 self.stateObservers.remove(observeCommand)
@@ -120,7 +120,7 @@ public final class Core<State> {
         }
         
         let stopObservation = Disposable(
-            id: "remove the Actions observe: \(observe) from observers list",
+            id: "remove the Actions observe: \(String(describing: observe)) from observers list",
             action:{ [weak observeCommand] in
                 guard let command = observeCommand else { return }
                 self.actionsObservers.remove(command)
@@ -160,7 +160,7 @@ class CommandOf<T> {
     func execute(with value: T) {
         action(value)
     }
-    
+
     /// Support for Xcode quick look feature.
     @objc func debugQuickLookObject() -> AnyObject? {
         return debugDescription as NSString
@@ -199,7 +199,13 @@ extension CommandOf: Hashable, Equatable {
         func ==(left: CommandOf, right: CommandOf) -> Bool {
         return ObjectIdentifier(left) == ObjectIdentifier(right)
     }
-    
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(ObjectIdentifier(self).hashValue)
+    }
+
+    #if swift(<5)
     var hashValue: Int { return ObjectIdentifier(self).hashValue }
+    #endif
 }
 

@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D263906F222C4507004C4028 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263906E222C4507004C4028 /* AtomicValue.swift */; };
-		D2639070222C453E004C4028 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263906E222C4507004C4028 /* AtomicValue.swift */; };
-		D2639071222C453F004C4028 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263906E222C4507004C4028 /* AtomicValue.swift */; };
+		A97E363622A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
+		A97E363722A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
+		A97E363822A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
+		A97E363922A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
+		A97E363A22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
+		A97E363B22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
+		A97E363C22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
+		A97E363D22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
+		A97E364E22A675CB001FFDD8 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364B22A675CB001FFDD8 /* AtomicValue.swift */; };
+		A97E364F22A675CB001FFDD8 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364B22A675CB001FFDD8 /* AtomicValue.swift */; };
+		A97E365022A675CB001FFDD8 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364B22A675CB001FFDD8 /* AtomicValue.swift */; };
+		A97E365122A675CB001FFDD8 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364C22A675CB001FFDD8 /* DisposerTests.swift */; };
+		A97E365222A675CB001FFDD8 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364C22A675CB001FFDD8 /* DisposerTests.swift */; };
+		A97E365322A675CB001FFDD8 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364C22A675CB001FFDD8 /* DisposerTests.swift */; };
+		A97E365422A675CB001FFDD8 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */; };
+		A97E365522A675CB001FFDD8 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */; };
+		A97E365622A675CB001FFDD8 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */; };
 		FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE23057D20CFF0E5000E4355 /* Unicore.framework */; };
-		FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
 		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
-		FE2305FA20CFF445000E4355 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
-		FE23060920CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FE23060B20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FE23060C20CFF8A1000E4355 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
-		FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
-		FE56690021770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
-		FE56690121770F320055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
-		FE56690221770F330055DEF1 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5668F921770D150055DEF1 /* Disposer.swift */; };
-		FE566904217719EC0055DEF1 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE566903217719EC0055DEF1 /* DisposerTests.swift */; };
-		FE56690521771B040055DEF1 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE566903217719EC0055DEF1 /* DisposerTests.swift */; };
-		FE56690621771B040055DEF1 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE566903217719EC0055DEF1 /* DisposerTests.swift */; };
 		FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED3CF5820D0477E00AB04C8 /* Unicore.framework */; };
-		FEAD14DD20D04F1300BBBD88 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */; };
-		FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23060020CFF8A1000E4355 /* Core.swift */; };
 		FEE0831820E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE0831920E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE0831A20E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,18 +58,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D263906E222C4507004C4028 /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		A97E363022A675BC001FFDD8 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		A97E363122A675BC001FFDD8 /* Disposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
+		A97E364B22A675CB001FFDD8 /* AtomicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		A97E364C22A675CB001FFDD8 /* DisposerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
+		A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreBasicTests.swift; sourceTree = "<group>"; };
 		FE23057D20CFF0E5000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE23058120CFF0E5000E4355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBasicTests.swift; sourceTree = "<group>"; };
 		FE2305D220CFF189000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305DF20CFF19C000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305F820CFF3C6000E4355 /* tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
-		FE23060020CFF8A1000E4355 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		FE5668F921770D150055DEF1 /* Disposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
-		FE566903217719EC0055DEF1 /* DisposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
 		FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED3CF5820D0477E00AB04C8 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0831620E8F29E004EC22C /* Unicore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unicore.podspec; sourceTree = SOURCE_ROOT; };
@@ -132,11 +132,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A97E362E22A675BC001FFDD8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A97E364A22A675CB001FFDD8 /* UnicoreTests */,
+				A97E362F22A675BC001FFDD8 /* Unicore */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A97E362F22A675BC001FFDD8 /* Unicore */ = {
+			isa = PBXGroup;
+			children = (
+				A97E363022A675BC001FFDD8 /* Core.swift */,
+				A97E363122A675BC001FFDD8 /* Disposer.swift */,
+			);
+			path = Unicore;
+			sourceTree = "<group>";
+		};
+		A97E364A22A675CB001FFDD8 /* UnicoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				A97E364B22A675CB001FFDD8 /* AtomicValue.swift */,
+				A97E364C22A675CB001FFDD8 /* DisposerTests.swift */,
+				A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */,
+			);
+			path = UnicoreTests;
+			sourceTree = "<group>";
+		};
 		FE23057320CFF0E5000E4355 = {
 			isa = PBXGroup;
 			children = (
-				FE2305F620CFF289000E4355 /* Source */,
-				FE2305F720CFF299000E4355 /* Tests */,
+				A97E362E22A675BC001FFDD8 /* Sources */,
 				FE23057F20CFF0E5000E4355 /* Support */,
 				FE23057E20CFF0E5000E4355 /* Products */,
 			);
@@ -165,25 +192,6 @@
 				FE23058120CFF0E5000E4355 /* Info.plist */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		FE2305F620CFF289000E4355 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				FE23060020CFF8A1000E4355 /* Core.swift */,
-				FE5668F921770D150055DEF1 /* Disposer.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		FE2305F720CFF299000E4355 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				FE23058B20CFF0E5000E4355 /* CoreBasicTests.swift */,
-				D263906E222C4507004C4028 /* AtomicValue.swift */,
-				FE566903217719EC0055DEF1 /* DisposerTests.swift */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,11 +370,11 @@
 				TargetAttributes = {
 					FE23057C20CFF0E5000E4355 = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1100;
 					};
 					FE23058520CFF0E5000E4355 = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1100;
 					};
 					FE2305D120CFF189000E4355 = {
 						CreatedOnToolsVersion = 9.4;
@@ -471,8 +479,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE23060920CFF8A1000E4355 /* Core.swift in Sources */,
-				FE5668FA21770D150055DEF1 /* Disposer.swift in Sources */,
+				A97E363A22A675BC001FFDD8 /* Disposer.swift in Sources */,
+				A97E363622A675BC001FFDD8 /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,9 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D263906F222C4507004C4028 /* AtomicValue.swift in Sources */,
-				FE566904217719EC0055DEF1 /* DisposerTests.swift in Sources */,
-				FE23058C20CFF0E5000E4355 /* CoreBasicTests.swift in Sources */,
+				A97E365422A675CB001FFDD8 /* CoreBasicTests.swift in Sources */,
+				A97E365122A675CB001FFDD8 /* DisposerTests.swift in Sources */,
+				A97E364E22A675CB001FFDD8 /* AtomicValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,8 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE23060B20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE56690021770F320055DEF1 /* Disposer.swift in Sources */,
+				A97E363B22A675BC001FFDD8 /* Disposer.swift in Sources */,
+				A97E363722A675BC001FFDD8 /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,8 +507,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE23060C20CFF8A1000E4355 /* Core.swift in Sources */,
-				FE56690121770F320055DEF1 /* Disposer.swift in Sources */,
+				A97E363C22A675BC001FFDD8 /* Disposer.swift in Sources */,
+				A97E363822A675BC001FFDD8 /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,9 +516,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2639070222C453E004C4028 /* AtomicValue.swift in Sources */,
-				FE56690521771B040055DEF1 /* DisposerTests.swift in Sources */,
-				FE2305FA20CFF445000E4355 /* CoreBasicTests.swift in Sources */,
+				A97E365522A675CB001FFDD8 /* CoreBasicTests.swift in Sources */,
+				A97E365222A675CB001FFDD8 /* DisposerTests.swift in Sources */,
+				A97E364F22A675CB001FFDD8 /* AtomicValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,9 +526,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2639071222C453F004C4028 /* AtomicValue.swift in Sources */,
-				FE56690621771B040055DEF1 /* DisposerTests.swift in Sources */,
-				FEAD14DD20D04F1300BBBD88 /* CoreBasicTests.swift in Sources */,
+				A97E365622A675CB001FFDD8 /* CoreBasicTests.swift in Sources */,
+				A97E365322A675CB001FFDD8 /* DisposerTests.swift in Sources */,
+				A97E365022A675CB001FFDD8 /* AtomicValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,8 +536,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEAD14DF20D04FCD00BBBD88 /* Core.swift in Sources */,
-				FE56690221770F330055DEF1 /* Disposer.swift in Sources */,
+				A97E363D22A675BC001FFDD8 /* Disposer.swift in Sources */,
+				A97E363922A675BC001FFDD8 /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +709,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -730,13 +738,14 @@
 				PRODUCT_NAME = Unicore;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		FE23059520CFF0E5000E4355 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -750,13 +759,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.UnicoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		FE23059620CFF0E5000E4355 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -770,7 +780,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.UnicoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -901,6 +911,7 @@
 		FE2305F420CFF19C000E4355 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -924,6 +935,7 @@
 		FE2305F520CFF19C000E4355 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
