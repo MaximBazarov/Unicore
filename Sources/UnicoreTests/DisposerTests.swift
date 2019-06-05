@@ -2,9 +2,26 @@
 //  DisposerTests.swift
 //  UnicoreTests
 //
-//  Created by Maksim Bazarov on 17.10.18.
-//  Copyright © 2018 Maksim Bazarov. All rights reserved.
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
+
 
 import XCTest
 @testable import Unicore
@@ -15,7 +32,7 @@ class DisposerTests: XCTestCase {
     func testDispose_AddOneDisposal_shouldCallDisposalsWhenDisposerDeinits() {
         let exp = expectation(description: "Disposer must execute command when deinits")
         var disposer: Disposer? = Disposer()
-        disposer!.add(disposal: PlainCommand {
+        disposer!.add(disposal: Disposable {
             exp.fulfill()
         })
         disposer = nil
@@ -29,11 +46,11 @@ class DisposerTests: XCTestCase {
         
         var disposer: Disposer? = Disposer()
         
-        disposer!.add(disposal: PlainCommand {
+        disposer!.add(disposal: Disposable {
             exp1.fulfill()
         })
         
-        disposer!.add(disposal: PlainCommand {
+        disposer!.add(disposal: Disposable {
             exp2.fulfill()
         })
 
@@ -48,7 +65,7 @@ class DisposerTests: XCTestCase {
         let exp = expectation(description: "Disposer must execute command when deinits")
         var disposer: Disposer? = Disposer()
         
-        PlainCommand {
+        Disposable {
             exp.fulfill()
         }.dispose(on: disposer!)
         
@@ -63,11 +80,11 @@ class DisposerTests: XCTestCase {
         
         var disposer: Disposer? = Disposer()
         
-        PlainCommand {
+        Disposable {
             exp1.fulfill()
         }.dispose(on: disposer!)
         
-        PlainCommand {
+        Disposable {
             exp2.fulfill()
         }.dispose(on: disposer!)
         

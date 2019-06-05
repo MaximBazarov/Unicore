@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Command",
+        "repositoryURL": "https://github.com/Unicore/Command.git",
+        "state": {
+          "branch": "spm",
+          "revision": "e16db6d227ff42563783bf66bf59fd339d396c8c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

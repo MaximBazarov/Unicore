@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'Unicore'
-  s.version = '1.0.6'
+  s.version = '2.0.0'
   s.swift_version = '4.2'
   s.license = 'MIT'
   s.summary = 'The Unicore is an application design approach which lets you increase the reliability and maintainability of your application.'
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
-  s.source_files = 'Source/**/*.swift'
+  s.source_files = 'Sources/Unicore/**/*.swift'
 
 end
