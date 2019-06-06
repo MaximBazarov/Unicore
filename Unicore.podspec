@@ -16,4 +16,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   s.source_files = 'Sources/Unicore/**/*.swift'
 
+  s.dependency 'Command'
+
 end
