@@ -9,7 +9,7 @@
 ======================================
 [Architecture](#Architecture) | [Installation](#installation) | [Framework API](#api-and-usage) | [FAQ](#faq) | [Examples](#examples) | [Credits](#credits)
 
-iOS: 9.0 + | macOS: 10.10 + | watchOS 2.0 + | tvOS: 9.0 +
+iOS: 13.0 + | iPadOS: 13.0 + | macOS: 10.15 + | watchOS 6.0 + | tvOS: 13.0 +
 ___
 
 The Unicore is a highly scalable **application design approach** (architecture) which lets you increase the maintainability of an application, increase testability, and give your team the flexibility by decoupling code of an application.
