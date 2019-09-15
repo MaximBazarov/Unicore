@@ -3,583 +3,403 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"Unicore::UnicorePackageTests::ProductTarget" /* UnicorePackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_62 /* Build configuration list for PBXAggregateTarget "UnicorePackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_65 /* PBXTargetDependency */,
+			);
+			name = UnicorePackageTests;
+			productName = UnicorePackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		A97E363622A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
-		A97E363722A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
-		A97E363822A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
-		A97E363922A675BC001FFDD8 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363022A675BC001FFDD8 /* Core.swift */; };
-		A97E363A22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
-		A97E363B22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
-		A97E363C22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
-		A97E363D22A675BC001FFDD8 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E363122A675BC001FFDD8 /* Disposer.swift */; };
-		A97E364E22A675CB001FFDD8 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364B22A675CB001FFDD8 /* AtomicValue.swift */; };
-		A97E364F22A675CB001FFDD8 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364B22A675CB001FFDD8 /* AtomicValue.swift */; };
-		A97E365022A675CB001FFDD8 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364B22A675CB001FFDD8 /* AtomicValue.swift */; };
-		A97E365122A675CB001FFDD8 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364C22A675CB001FFDD8 /* DisposerTests.swift */; };
-		A97E365222A675CB001FFDD8 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364C22A675CB001FFDD8 /* DisposerTests.swift */; };
-		A97E365322A675CB001FFDD8 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364C22A675CB001FFDD8 /* DisposerTests.swift */; };
-		A97E365422A675CB001FFDD8 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */; };
-		A97E365522A675CB001FFDD8 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */; };
-		A97E365622A675CB001FFDD8 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */; };
-		FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE23057D20CFF0E5000E4355 /* Unicore.framework */; };
-		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
-		FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED3CF5820D0477E00AB04C8 /* Unicore.framework */; };
-		FEE0831820E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEE0831920E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEE0831A20E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEE0831B20E8F2E7004EC22C /* Unicore.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0831720E8F2E7004EC22C /* Unicore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_37 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Command.swift */; };
+		OBJ_44 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Package.swift */; };
+		OBJ_50 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Core.swift */; };
+		OBJ_51 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Disposer.swift */; };
+		OBJ_53 /* Command.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Command::Command::Product" /* Command.framework */; };
+		OBJ_60 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_71 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* AtomicValue.swift */; };
+		OBJ_72 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CoreBasicTests.swift */; };
+		OBJ_73 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* DisposerTests.swift */; };
+		OBJ_75 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Unicore::Unicore::Product" /* Unicore.framework */; };
+		OBJ_76 /* Command.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Command::Command::Product" /* Command.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FE23058820CFF0E5000E4355 /* PBXContainerItemProxy */ = {
+		D21FA685232E24B60032C2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FE23057420CFF0E5000E4355 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FE23057C20CFF0E5000E4355;
+			remoteGlobalIDString = "Command::Command";
+			remoteInfo = Command;
+		};
+		D21FA686232E24B60032C2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Unicore::Unicore";
 			remoteInfo = Unicore;
 		};
-		FE2305E920CFF19C000E4355 /* PBXContainerItemProxy */ = {
+		D21FA687232E24B60032C2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FE23057420CFF0E5000E4355 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FE2305DE20CFF19C000E4355;
-			remoteInfo = "Unicore tvOS";
+			remoteGlobalIDString = "Command::Command";
+			remoteInfo = Command;
 		};
-		FEAD14D820D04F0A00BBBD88 /* PBXContainerItemProxy */ = {
+		D21FA688232E24B70032C2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FE23057420CFF0E5000E4355 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FED3CF5720D0477E00AB04C8;
-			remoteInfo = "Unicore iOS";
+			remoteGlobalIDString = "Unicore::UnicoreTests";
+			remoteInfo = UnicoreTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A97E363022A675BC001FFDD8 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		A97E363122A675BC001FFDD8 /* Disposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
-		A97E364B22A675CB001FFDD8 /* AtomicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
-		A97E364C22A675CB001FFDD8 /* DisposerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
-		A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreBasicTests.swift; sourceTree = "<group>"; };
-		FE23057D20CFF0E5000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE23058120CFF0E5000E4355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE2305D220CFF189000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE2305DF20CFF19C000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE2305F820CFF3C6000E4355 /* tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
-		FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unicore iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FED3CF5820D0477E00AB04C8 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEE0831620E8F29E004EC22C /* Unicore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unicore.podspec; sourceTree = SOURCE_ROOT; };
-		FEE0831720E8F2E7004EC22C /* Unicore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unicore.h; sourceTree = "<group>"; };
+		"Command::Command::Product" /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Command.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Disposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
+		OBJ_13 /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		OBJ_14 /* CoreBasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBasicTests.swift; sourceTree = "<group>"; };
+		OBJ_15 /* DisposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/dabazar/code/Unicore/.build/checkouts/Command/Package.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
+		OBJ_26 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = SOURCE_ROOT; };
+		OBJ_27 /* Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Support; sourceTree = SOURCE_ROOT; };
+		OBJ_28 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_29 /* Unicore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unicore.podspec; sourceTree = "<group>"; };
+		OBJ_30 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		OBJ_31 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		"Unicore::Unicore::Product" /* Unicore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Unicore::UnicoreTests::Product" /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE23057920CFF0E5000E4355 /* Frameworks */ = {
+		OBJ_38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE23058320CFF0E5000E4355 /* Frameworks */ = {
+		OBJ_52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */,
+				OBJ_53 /* Command.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE2305CE20CFF189000E4355 /* Frameworks */ = {
+		OBJ_74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305DB20CFF19C000E4355 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305E420CFF19C000E4355 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEAD14CF20D04F0A00BBBD88 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED3CF5420D0477E00AB04C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				OBJ_75 /* Unicore.framework in Frameworks */,
+				OBJ_76 /* Command.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A97E362E22A675BC001FFDD8 /* Sources */ = {
+		OBJ_11 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A97E364A22A675CB001FFDD8 /* UnicoreTests */,
-				A97E362F22A675BC001FFDD8 /* Unicore */,
+				OBJ_12 /* UnicoreTests */,
 			);
-			path = Sources;
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_12 /* UnicoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* AtomicValue.swift */,
+				OBJ_14 /* CoreBasicTests.swift */,
+				OBJ_15 /* DisposerTests.swift */,
+			);
+			name = UnicoreTests;
+			path = Sources/UnicoreTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* Command */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		A97E362F22A675BC001FFDD8 /* Unicore */ = {
+		OBJ_17 /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				A97E363022A675BC001FFDD8 /* Core.swift */,
-				A97E363122A675BC001FFDD8 /* Disposer.swift */,
+				OBJ_18 /* Command */,
+				OBJ_20 /* Package.swift */,
 			);
-			path = Unicore;
-			sourceTree = "<group>";
+			name = Command;
+			sourceTree = SOURCE_ROOT;
 		};
-		A97E364A22A675CB001FFDD8 /* UnicoreTests */ = {
+		OBJ_18 /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				A97E364B22A675CB001FFDD8 /* AtomicValue.swift */,
-				A97E364C22A675CB001FFDD8 /* DisposerTests.swift */,
-				A97E364D22A675CB001FFDD8 /* CoreBasicTests.swift */,
+				OBJ_19 /* Command.swift */,
 			);
-			path = UnicoreTests;
-			sourceTree = "<group>";
+			name = Command;
+			path = .build/checkouts/Command/Sources/Command;
+			sourceTree = SOURCE_ROOT;
 		};
-		FE23057320CFF0E5000E4355 = {
+		OBJ_21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A97E362E22A675BC001FFDD8 /* Sources */,
-				FE23057F20CFF0E5000E4355 /* Support */,
-				FE23057E20CFF0E5000E4355 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		FE23057E20CFF0E5000E4355 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FE23057D20CFF0E5000E4355 /* Unicore.framework */,
-				FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */,
-				FE2305D220CFF189000E4355 /* Unicore.framework */,
-				FE2305DF20CFF19C000E4355 /* Unicore.framework */,
-				FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */,
-				FED3CF5820D0477E00AB04C8 /* Unicore.framework */,
-				FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */,
+				"Command::Command::Product" /* Command.framework */,
+				"Unicore::UnicoreTests::Product" /* UnicoreTests.xctest */,
+				"Unicore::Unicore::Product" /* Unicore.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FE23057F20CFF0E5000E4355 /* Support */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				FEE0831720E8F2E7004EC22C /* Unicore.h */,
-				FEE0831620E8F29E004EC22C /* Unicore.podspec */,
-				FE2305F820CFF3C6000E4355 /* tvOS-Info.plist */,
-				FE23058120CFF0E5000E4355 /* Info.plist */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_11 /* Tests */,
+				OBJ_16 /* Dependencies */,
+				OBJ_21 /* Products */,
+				OBJ_25 /* Carthage */,
+				OBJ_26 /* Docs */,
+				OBJ_27 /* Support */,
+				OBJ_28 /* LICENSE */,
+				OBJ_29 /* Unicore.podspec */,
+				OBJ_30 /* Cartfile */,
+				OBJ_31 /* README.md */,
 			);
-			path = Support;
+			name = "";
 			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Unicore */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Unicore */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Core.swift */,
+				OBJ_10 /* Disposer.swift */,
+			);
+			name = Unicore;
+			path = Sources/Unicore;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		FE23057A20CFF0E5000E4355 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEE0831820E8F2E7004EC22C /* Unicore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305CF20CFF189000E4355 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEE0831920E8F2E7004EC22C /* Unicore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305DC20CFF19C000E4355 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEE0831A20E8F2E7004EC22C /* Unicore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED3CF5520D0477E00AB04C8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEE0831B20E8F2E7004EC22C /* Unicore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		FE23057C20CFF0E5000E4355 /* Unicore */ = {
+		"Command::Command" /* Command */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE23059120CFF0E5000E4355 /* Build configuration list for PBXNativeTarget "Unicore" */;
+			buildConfigurationList = OBJ_33 /* Build configuration list for PBXNativeTarget "Command" */;
 			buildPhases = (
-				FE23057820CFF0E5000E4355 /* Sources */,
-				FE23057920CFF0E5000E4355 /* Frameworks */,
-				FE23057A20CFF0E5000E4355 /* Headers */,
-				FE23057B20CFF0E5000E4355 /* Resources */,
+				OBJ_36 /* Sources */,
+				OBJ_38 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = Command;
+			productName = Command;
+			productReference = "Command::Command::Product" /* Command.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Command::SwiftPMPackageDescription" /* CommandPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_40 /* Build configuration list for PBXNativeTarget "CommandPackageDescription" */;
+			buildPhases = (
+				OBJ_43 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommandPackageDescription;
+			productName = CommandPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Unicore::SwiftPMPackageDescription" /* UnicorePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_56 /* Build configuration list for PBXNativeTarget "UnicorePackageDescription" */;
+			buildPhases = (
+				OBJ_59 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnicorePackageDescription;
+			productName = UnicorePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Unicore::Unicore" /* Unicore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_46 /* Build configuration list for PBXNativeTarget "Unicore" */;
+			buildPhases = (
+				OBJ_49 /* Sources */,
+				OBJ_52 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_54 /* PBXTargetDependency */,
 			);
 			name = Unicore;
 			productName = Unicore;
-			productReference = FE23057D20CFF0E5000E4355 /* Unicore.framework */;
+			productReference = "Unicore::Unicore::Product" /* Unicore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FE23058520CFF0E5000E4355 /* UnicoreTests */ = {
+		"Unicore::UnicoreTests" /* UnicoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE23059420CFF0E5000E4355 /* Build configuration list for PBXNativeTarget "UnicoreTests" */;
+			buildConfigurationList = OBJ_67 /* Build configuration list for PBXNativeTarget "UnicoreTests" */;
 			buildPhases = (
-				FE23058220CFF0E5000E4355 /* Sources */,
-				FE23058320CFF0E5000E4355 /* Frameworks */,
-				FE23058420CFF0E5000E4355 /* Resources */,
+				OBJ_70 /* Sources */,
+				OBJ_74 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FE23058920CFF0E5000E4355 /* PBXTargetDependency */,
+				OBJ_77 /* PBXTargetDependency */,
+				OBJ_78 /* PBXTargetDependency */,
 			);
 			name = UnicoreTests;
 			productName = UnicoreTests;
-			productReference = FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */;
+			productReference = "Unicore::UnicoreTests::Product" /* UnicoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FE2305D120CFF189000E4355 /* Unicore watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE2305D720CFF189000E4355 /* Build configuration list for PBXNativeTarget "Unicore watchOS" */;
-			buildPhases = (
-				FE2305CD20CFF189000E4355 /* Sources */,
-				FE2305CE20CFF189000E4355 /* Frameworks */,
-				FE2305CF20CFF189000E4355 /* Headers */,
-				FE2305D020CFF189000E4355 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Unicore watchOS";
-			productName = "Unicore watchOS";
-			productReference = FE2305D220CFF189000E4355 /* Unicore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FE2305DE20CFF19C000E4355 /* Unicore tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE2305F020CFF19C000E4355 /* Build configuration list for PBXNativeTarget "Unicore tvOS" */;
-			buildPhases = (
-				FE2305DA20CFF19C000E4355 /* Sources */,
-				FE2305DB20CFF19C000E4355 /* Frameworks */,
-				FE2305DC20CFF19C000E4355 /* Headers */,
-				FE2305DD20CFF19C000E4355 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Unicore tvOS";
-			productName = "Unicore tvOS";
-			productReference = FE2305DF20CFF19C000E4355 /* Unicore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FE2305E620CFF19C000E4355 /* Unicore tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE2305F320CFF19C000E4355 /* Build configuration list for PBXNativeTarget "Unicore tvOSTests" */;
-			buildPhases = (
-				FE2305E320CFF19C000E4355 /* Sources */,
-				FE2305E420CFF19C000E4355 /* Frameworks */,
-				FE2305E520CFF19C000E4355 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FE2305EA20CFF19C000E4355 /* PBXTargetDependency */,
-			);
-			name = "Unicore tvOSTests";
-			productName = "Unicore tvOSTests";
-			productReference = FE2305E720CFF19C000E4355 /* Unicore tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FEAD14D120D04F0A00BBBD88 /* Unicore iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FEAD14DA20D04F0A00BBBD88 /* Build configuration list for PBXNativeTarget "Unicore iOSTests" */;
-			buildPhases = (
-				FEAD14CE20D04F0A00BBBD88 /* Sources */,
-				FEAD14CF20D04F0A00BBBD88 /* Frameworks */,
-				FEAD14D020D04F0A00BBBD88 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FEAD14D920D04F0A00BBBD88 /* PBXTargetDependency */,
-			);
-			name = "Unicore iOSTests";
-			productName = "Unicore iOSTests";
-			productReference = FEAD14D220D04F0A00BBBD88 /* Unicore iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FED3CF5720D0477E00AB04C8 /* Unicore iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FED3CF6920D0477E00AB04C8 /* Build configuration list for PBXNativeTarget "Unicore iOS" */;
-			buildPhases = (
-				FED3CF5320D0477E00AB04C8 /* Sources */,
-				FED3CF5420D0477E00AB04C8 /* Frameworks */,
-				FED3CF5520D0477E00AB04C8 /* Headers */,
-				FED3CF5620D0477E00AB04C8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Unicore iOS";
-			productName = "Unicore iOS";
-			productReference = FED3CF5820D0477E00AB04C8 /* Unicore.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE23057420CFF0E5000E4355 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Maksim Bazarov";
-				TargetAttributes = {
-					FE23057C20CFF0E5000E4355 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1100;
-					};
-					FE23058520CFF0E5000E4355 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1100;
-					};
-					FE2305D120CFF189000E4355 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 0940;
-					};
-					FE2305DE20CFF19C000E4355 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
-					};
-					FE2305E620CFF19C000E4355 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
-					};
-					FEAD14D120D04F0A00BBBD88 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
-					};
-					FED3CF5720D0477E00AB04C8 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = FE23057720CFF0E5000E4355 /* Build configuration list for PBXProject "Unicore" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Unicore" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = FE23057320CFF0E5000E4355;
-			productRefGroup = FE23057E20CFF0E5000E4355 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE23057C20CFF0E5000E4355 /* Unicore */,
-				FE23058520CFF0E5000E4355 /* UnicoreTests */,
-				FE2305D120CFF189000E4355 /* Unicore watchOS */,
-				FE2305DE20CFF19C000E4355 /* Unicore tvOS */,
-				FE2305E620CFF19C000E4355 /* Unicore tvOSTests */,
-				FED3CF5720D0477E00AB04C8 /* Unicore iOS */,
-				FEAD14D120D04F0A00BBBD88 /* Unicore iOSTests */,
+				"Command::Command" /* Command */,
+				"Command::SwiftPMPackageDescription" /* CommandPackageDescription */,
+				"Unicore::Unicore" /* Unicore */,
+				"Unicore::SwiftPMPackageDescription" /* UnicorePackageDescription */,
+				"Unicore::UnicorePackageTests::ProductTarget" /* UnicorePackageTests */,
+				"Unicore::UnicoreTests" /* UnicoreTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		FE23057B20CFF0E5000E4355 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE23058420CFF0E5000E4355 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305D020CFF189000E4355 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305DD20CFF19C000E4355 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE2305E520CFF19C000E4355 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEAD14D020D04F0A00BBBD88 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED3CF5620D0477E00AB04C8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		FE23057820CFF0E5000E4355 /* Sources */ = {
+		OBJ_36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A97E363A22A675BC001FFDD8 /* Disposer.swift in Sources */,
-				A97E363622A675BC001FFDD8 /* Core.swift in Sources */,
+				OBJ_37 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE23058220CFF0E5000E4355 /* Sources */ = {
+		OBJ_43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A97E365422A675CB001FFDD8 /* CoreBasicTests.swift in Sources */,
-				A97E365122A675CB001FFDD8 /* DisposerTests.swift in Sources */,
-				A97E364E22A675CB001FFDD8 /* AtomicValue.swift in Sources */,
+				OBJ_44 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE2305CD20CFF189000E4355 /* Sources */ = {
+		OBJ_49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A97E363B22A675BC001FFDD8 /* Disposer.swift in Sources */,
-				A97E363722A675BC001FFDD8 /* Core.swift in Sources */,
+				OBJ_50 /* Core.swift in Sources */,
+				OBJ_51 /* Disposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE2305DA20CFF19C000E4355 /* Sources */ = {
+		OBJ_59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A97E363C22A675BC001FFDD8 /* Disposer.swift in Sources */,
-				A97E363822A675BC001FFDD8 /* Core.swift in Sources */,
+				OBJ_60 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE2305E320CFF19C000E4355 /* Sources */ = {
+		OBJ_70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				A97E365522A675CB001FFDD8 /* CoreBasicTests.swift in Sources */,
-				A97E365222A675CB001FFDD8 /* DisposerTests.swift in Sources */,
-				A97E364F22A675CB001FFDD8 /* AtomicValue.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEAD14CE20D04F0A00BBBD88 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A97E365622A675CB001FFDD8 /* CoreBasicTests.swift in Sources */,
-				A97E365322A675CB001FFDD8 /* DisposerTests.swift in Sources */,
-				A97E365022A675CB001FFDD8 /* AtomicValue.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED3CF5320D0477E00AB04C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A97E363D22A675BC001FFDD8 /* Disposer.swift in Sources */,
-				A97E363922A675BC001FFDD8 /* Core.swift in Sources */,
+				OBJ_71 /* AtomicValue.swift in Sources */,
+				OBJ_72 /* CoreBasicTests.swift in Sources */,
+				OBJ_73 /* DisposerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FE23058920CFF0E5000E4355 /* PBXTargetDependency */ = {
+		OBJ_54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE23057C20CFF0E5000E4355 /* Unicore */;
-			targetProxy = FE23058820CFF0E5000E4355 /* PBXContainerItemProxy */;
+			target = "Command::Command" /* Command */;
+			targetProxy = D21FA685232E24B60032C2F8 /* PBXContainerItemProxy */;
 		};
-		FE2305EA20CFF19C000E4355 /* PBXTargetDependency */ = {
+		OBJ_65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE2305DE20CFF19C000E4355 /* Unicore tvOS */;
-			targetProxy = FE2305E920CFF19C000E4355 /* PBXContainerItemProxy */;
+			target = "Unicore::UnicoreTests" /* UnicoreTests */;
+			targetProxy = D21FA688232E24B70032C2F8 /* PBXContainerItemProxy */;
 		};
-		FEAD14D920D04F0A00BBBD88 /* PBXTargetDependency */ = {
+		OBJ_77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FED3CF5720D0477E00AB04C8 /* Unicore iOS */;
-			targetProxy = FEAD14D820D04F0A00BBBD88 /* PBXContainerItemProxy */;
+			target = "Unicore::Unicore" /* Unicore */;
+			targetProxy = D21FA686232E24B60032C2F8 /* PBXContainerItemProxy */;
+		};
+		OBJ_78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Command::Command" /* Command */;
+			targetProxy = D21FA687232E24B60032C2F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		FE23058F20CFF0E5000E4355 /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -587,63 +407,101 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = Unicore;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		FE23059020CFF0E5000E4355 /* Release */ = {
+		OBJ_34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Unicore.xcodeproj/Command_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Command;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Command;
+			};
+			name = Debug;
+		};
+		OBJ_35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Unicore.xcodeproj/Command_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Command;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Command;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -651,484 +509,244 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Unicore;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		FE23059220CFF0E5000E4355 /* Debug */ = {
+		OBJ_41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				PRODUCT_NAME = Unicore;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		FE23059320CFF0E5000E4355 /* Release */ = {
+		OBJ_42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				PRODUCT_NAME = Unicore;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
-		FE23059520CFF0E5000E4355 /* Debug */ = {
+		OBJ_47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Support/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.UnicoreTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		FE23059620CFF0E5000E4355 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Support/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.UnicoreTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FE2305D820CFF189000E4355 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				PRODUCT_NAME = Unicore;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Unicore.xcodeproj/Unicore_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Unicore;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TARGET_NAME = Unicore;
 			};
 			name = Debug;
 		};
-		FE2305D920CFF189000E4355 /* Release */ = {
+		OBJ_48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				PRODUCT_NAME = Unicore;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Unicore.xcodeproj/Unicore_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Unicore;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TARGET_NAME = Unicore;
 			};
 			name = Release;
 		};
-		FE2305F120CFF19C000E4355 /* Debug */ = {
+		OBJ_57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Support/tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Unicore.xcodeproj/UnicoreTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = UnicoreTests;
 			};
 			name = Debug;
 		};
-		FE2305F220CFF19C000E4355 /* Release */ = {
+		OBJ_69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Support/tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FE2305F420CFF19C000E4355 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Support/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "im.mks.fs.Unicore-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.4;
-			};
-			name = Debug;
-		};
-		FE2305F520CFF19C000E4355 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Support/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "im.mks.fs.Unicore-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.4;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FEAD14DB20D04F0A00BBBD88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "im.mks.fs.Unicore-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FEAD14DC20D04F0A00BBBD88 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "im.mks.fs.Unicore-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FED3CF6A20D0477E00AB04C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FED3CF6B20D0477E00AB04C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Support/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = im.mks.fs.Unicore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Unicore.xcodeproj/UnicoreTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = UnicoreTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE23057720CFF0E5000E4355 /* Build configuration list for PBXProject "Unicore" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "Unicore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE23058F20CFF0E5000E4355 /* Debug */,
-				FE23059020CFF0E5000E4355 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE23059120CFF0E5000E4355 /* Build configuration list for PBXNativeTarget "Unicore" */ = {
+		OBJ_33 /* Build configuration list for PBXNativeTarget "Command" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE23059220CFF0E5000E4355 /* Debug */,
-				FE23059320CFF0E5000E4355 /* Release */,
+				OBJ_34 /* Debug */,
+				OBJ_35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE23059420CFF0E5000E4355 /* Build configuration list for PBXNativeTarget "UnicoreTests" */ = {
+		OBJ_40 /* Build configuration list for PBXNativeTarget "CommandPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE23059520CFF0E5000E4355 /* Debug */,
-				FE23059620CFF0E5000E4355 /* Release */,
+				OBJ_41 /* Debug */,
+				OBJ_42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE2305D720CFF189000E4355 /* Build configuration list for PBXNativeTarget "Unicore watchOS" */ = {
+		OBJ_46 /* Build configuration list for PBXNativeTarget "Unicore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE2305D820CFF189000E4355 /* Debug */,
-				FE2305D920CFF189000E4355 /* Release */,
+				OBJ_47 /* Debug */,
+				OBJ_48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE2305F020CFF19C000E4355 /* Build configuration list for PBXNativeTarget "Unicore tvOS" */ = {
+		OBJ_56 /* Build configuration list for PBXNativeTarget "UnicorePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE2305F120CFF19C000E4355 /* Debug */,
-				FE2305F220CFF19C000E4355 /* Release */,
+				OBJ_57 /* Debug */,
+				OBJ_58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE2305F320CFF19C000E4355 /* Build configuration list for PBXNativeTarget "Unicore tvOSTests" */ = {
+		OBJ_62 /* Build configuration list for PBXAggregateTarget "UnicorePackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE2305F420CFF19C000E4355 /* Debug */,
-				FE2305F520CFF19C000E4355 /* Release */,
+				OBJ_63 /* Debug */,
+				OBJ_64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FEAD14DA20D04F0A00BBBD88 /* Build configuration list for PBXNativeTarget "Unicore iOSTests" */ = {
+		OBJ_67 /* Build configuration list for PBXNativeTarget "UnicoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEAD14DB20D04F0A00BBBD88 /* Debug */,
-				FEAD14DC20D04F0A00BBBD88 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FED3CF6920D0477E00AB04C8 /* Build configuration list for PBXNativeTarget "Unicore iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FED3CF6A20D0477E00AB04C8 /* Debug */,
-				FED3CF6B20D0477E00AB04C8 /* Release */,
+				OBJ_68 /* Debug */,
+				OBJ_69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FE23057420CFF0E5000E4355 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

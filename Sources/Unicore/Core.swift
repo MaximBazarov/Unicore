@@ -52,11 +52,14 @@ public final class Core<State> {
     private let coreDispatchQueue = DispatchQueue(label: "com.unicore.core-lock-queue")
     
     private var state: State
-    private let reducer: (State, Action) -> State
+    private let reducer: (inout State, Action) -> Void
     private var actionsObservers: Set<CommandOf<(State, Action)>> = []
     private var stateObservers:  Set<CommandOf<State>> = []
     
-    public init(state: State, reducer: @escaping (State, Action) -> State) {
+    public init(
+        state: State,
+        reducer: @escaping (inout State, Action) -> Void
+    ) {
         self.state = state
         self.reducer = reducer
     }
@@ -69,7 +72,7 @@ public final class Core<State> {
     public func dispatch(_ action: Action) {
         coreDispatchQueue.async {
             self.actionsObservers.forEach {$0.execute(with: (self.state, action))}
-            self.state = self.reducer(self.state, action)
+            self.reducer(&self.state, action)
             self.stateObservers.forEach { $0.execute(with: self.state) }
         }
     }
