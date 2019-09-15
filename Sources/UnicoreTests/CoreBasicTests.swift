@@ -37,7 +37,7 @@ class UnicoreTests: XCTestCase {
     func testComponentSubscribedAndRecevesCurrentState() {
         let exp = expectation(description: "state is right")
         let state = 7
-        let sut = Core<Int>(state: state) { _, _ in state }
+        let sut = Core<Int>(state: state) { _, _ in  }
         sut.observe { value in
             if value == state { exp.fulfill() }
         }.dispose(on: disposer)
@@ -49,8 +49,8 @@ class UnicoreTests: XCTestCase {
         
         var sequence = Array(expectedStateSequence.reversed())
         
-        func reduce(_ state: Int, _ action: Action) -> Int {
-            return sequence.popLast()!
+        func reduce(_ state: inout Int, _ action: Action) {
+            state = sequence.popLast()!
         }
         
         let result: AtomicValue<[Int]> = AtomicValue([])
@@ -69,7 +69,7 @@ class UnicoreTests: XCTestCase {
     
     func testMiddlewareSubscribedAndDontReceveCurrentState() {
         let state = 7
-        let sut = Core<Int>(state: state) { _, _ in state }
+        let sut = Core<Int>(state: state) { _, _ in }
         sut.onAction { (_, _) in
             XCTFail()
         }.dispose(on: disposer)
@@ -84,8 +84,8 @@ class UnicoreTests: XCTestCase {
         
         var sequence = Array(expectedStateSequence.reversed())
         
-        func reduce(_ state: Int, _ action: Action) -> Int {
-            return sequence.popLast()!
+        func reduce(_ state: inout Int, _ action: Action) {
+            state = sequence.popLast()!
         }
         
         let sut = Core<Int>(state: sequence.popLast()!, reducer: reduce)
