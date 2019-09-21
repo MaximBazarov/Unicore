@@ -12,7 +12,7 @@ let package = Package(
             targets: ["Unicore"]),
     ],
     dependencies: [        
-        .package(url: "https://github.com/Unicore/Command.git", .branch("master")),
+        .package(url: "https://github.com/Unicore/Command.git", from: "1.5.2"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
