@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'Unicore'
-  s.version = '2.5.0'
+  s.version = '3.0.2'
   s.swift_version = '5'
   s.license = 'MIT'
   s.summary = 'The Unicore is an application design approach which lets you increase the reliability and maintainability of your application.'
