@@ -47,7 +47,7 @@ public protocol Action {}
 /// state = reducer(state, action)
 /// ```
 /// And then the Core will notify all the subscribers with the new State.
-public final class Core<State> {
+public final class Core<State>: ActionDispatcher {
     
     private let coreDispatchQueue = DispatchQueue(label: "com.unicore.core-lock-queue")
     
