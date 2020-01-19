@@ -1,4 +1,4 @@
 @import Foundation;
 
-FOUNDATION_EXPORT double UnicoreVersionNumber;
-FOUNDATION_EXPORT const unsigned char UnicoreFoundationVersionString[];
+FOUNDATION_EXPORT double CommandVersionNumber;
+FOUNDATION_EXPORT const unsigned char CommandVersionString[];
