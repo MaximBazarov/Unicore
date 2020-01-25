@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22496B323DC258A003985F7 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B223DC258A003985F7 /* Command.swift */; };
+		D22496B423DC258A003985F7 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B223DC258A003985F7 /* Command.swift */; };
+		D22496B523DC258A003985F7 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B223DC258A003985F7 /* Command.swift */; };
+		D22496B623DC258A003985F7 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B223DC258A003985F7 /* Command.swift */; };
+		D22496B823DC2596003985F7 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B723DC2596003985F7 /* CommandTests.swift */; };
+		D22496B923DC2596003985F7 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B723DC2596003985F7 /* CommandTests.swift */; };
+		D22496BA23DC2596003985F7 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22496B723DC2596003985F7 /* CommandTests.swift */; };
+		D22496BB23DC26C9003985F7 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
+		D22496BC23DC26CB003985F7 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
+		D22496BD23DC26CB003985F7 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
+		D22496BE23DC26CC003985F7 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
 		D2B6737423D45AD400BE4E87 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737223D45AD400BE4E87 /* Core.swift */; };
 		D2B6737523D45AD400BE4E87 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737223D45AD400BE4E87 /* Core.swift */; };
 		D2B6737623D45AD400BE4E87 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737223D45AD400BE4E87 /* Core.swift */; };
@@ -15,27 +26,12 @@
 		D2B6737923D45AD400BE4E87 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737323D45AD400BE4E87 /* Disposer.swift */; };
 		D2B6737A23D45AD400BE4E87 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737323D45AD400BE4E87 /* Disposer.swift */; };
 		D2B6737B23D45AD400BE4E87 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737323D45AD400BE4E87 /* Disposer.swift */; };
-		D2B6738023D45AE300BE4E87 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
-		D2B6738123D45AE300BE4E87 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
-		D2B6738223D45AE300BE4E87 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */; };
 		D2B6738323D45AE300BE4E87 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737E23D45AE300BE4E87 /* DisposerTests.swift */; };
 		D2B6738423D45AE300BE4E87 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737E23D45AE300BE4E87 /* DisposerTests.swift */; };
 		D2B6738523D45AE300BE4E87 /* DisposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737E23D45AE300BE4E87 /* DisposerTests.swift */; };
 		D2B6738623D45AE300BE4E87 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737F23D45AE300BE4E87 /* CoreBasicTests.swift */; };
 		D2B6738723D45AE300BE4E87 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737F23D45AE300BE4E87 /* CoreBasicTests.swift */; };
 		D2B6738823D45AE300BE4E87 /* CoreBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6737F23D45AE300BE4E87 /* CoreBasicTests.swift */; };
-		D2B6738B23D45BDA00BE4E87 /* Command.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B6738A23D45BDA00BE4E87 /* Command.framework */; };
-		D2B6738C23D45BDA00BE4E87 /* Command.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2B6738A23D45BDA00BE4E87 /* Command.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D2B6739023D45BFA00BE4E87 /* Command.framework.dSYM in dSYM */ = {isa = PBXBuildFile; fileRef = D2B6738F23D45BFA00BE4E87 /* Command.framework.dSYM */; };
-		D2B6739323D45C2C00BE4E87 /* Command.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B6739223D45C2C00BE4E87 /* Command.framework */; };
-		D2B6739423D45C2C00BE4E87 /* Command.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2B6739223D45C2C00BE4E87 /* Command.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D2B6739823D45C5000BE4E87 /* Command.framework.dSYM in dSYMs */ = {isa = PBXBuildFile; fileRef = D2B6739723D45C5000BE4E87 /* Command.framework.dSYM */; };
-		D2B6739A23D45C8400BE4E87 /* Command.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B6739923D45C8400BE4E87 /* Command.framework */; };
-		D2B6739B23D45C8400BE4E87 /* Command.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2B6739923D45C8400BE4E87 /* Command.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D2B6739F23D45C9D00BE4E87 /* Command.framework.dSYM in dSYM */ = {isa = PBXBuildFile; fileRef = D2B6739E23D45C9D00BE4E87 /* Command.framework.dSYM */; };
-		D2B673A123D45CDD00BE4E87 /* Command.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B673A023D45CDD00BE4E87 /* Command.framework */; };
-		D2B673A223D45CDD00BE4E87 /* Command.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2B673A023D45CDD00BE4E87 /* Command.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D2B673A623D45CFA00BE4E87 /* Command.framework.dSYM in dSYM */ = {isa = PBXBuildFile; fileRef = D2B673A523D45CFA00BE4E87 /* Command.framework.dSYM */; };
 		FE23058720CFF0E5000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE23057D20CFF0E5000E4355 /* Unicore.framework */; };
 		FE2305E820CFF19C000E4355 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2305DF20CFF19C000E4355 /* Unicore.framework */; };
 		FEAD14D720D04F0A00BBBD88 /* Unicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED3CF5820D0477E00AB04C8 /* Unicore.framework */; };
@@ -72,20 +68,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D2B6738C23D45BDA00BE4E87 /* Command.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2B6738E23D45BE000BE4E87 /* dSYM */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				D2B6739023D45BFA00BE4E87 /* Command.framework.dSYM in dSYM */,
-			);
-			name = dSYM;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D2B6739523D45C2C00BE4E87 /* Embed Frameworks */ = {
@@ -94,7 +78,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D2B6739423D45C2C00BE4E87 /* Command.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +88,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				D2B6739823D45C5000BE4E87 /* Command.framework.dSYM in dSYMs */,
 			);
 			name = dSYMs;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,7 +98,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D2B6739B23D45C8400BE4E87 /* Command.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +108,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				D2B6739F23D45C9D00BE4E87 /* Command.framework.dSYM in dSYM */,
 			);
 			name = dSYM;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,38 +118,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D2B673A223D45CDD00BE4E87 /* Command.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2B673A423D45CE700BE4E87 /* dSYM */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				D2B673A623D45CFA00BE4E87 /* Command.framework.dSYM in dSYM */,
-			);
-			name = dSYM;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D22496B223DC258A003985F7 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		D22496B723DC2596003985F7 /* CommandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
 		D2B6737223D45AD400BE4E87 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		D2B6737323D45AD400BE4E87 /* Disposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
 		D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
 		D2B6737E23D45AE300BE4E87 /* DisposerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposerTests.swift; sourceTree = "<group>"; };
 		D2B6737F23D45AE300BE4E87 /* CoreBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreBasicTests.swift; sourceTree = "<group>"; };
-		D2B6738A23D45BDA00BE4E87 /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Command.framework; path = Carthage/Build/Mac/Command.framework; sourceTree = "<group>"; };
-		D2B6738F23D45BFA00BE4E87 /* Command.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Command.framework.dSYM; path = Carthage/Build/Mac/Command.framework.dSYM; sourceTree = "<group>"; };
-		D2B6739223D45C2C00BE4E87 /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Command.framework; path = Carthage/Build/watchOS/Command.framework; sourceTree = "<group>"; };
-		D2B6739723D45C5000BE4E87 /* Command.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Command.framework.dSYM; path = Carthage/Build/watchOS/Command.framework.dSYM; sourceTree = "<group>"; };
-		D2B6739923D45C8400BE4E87 /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Command.framework; path = Carthage/Build/tvOS/Command.framework; sourceTree = "<group>"; };
-		D2B6739E23D45C9D00BE4E87 /* Command.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Command.framework.dSYM; path = Carthage/Build/tvOS/Command.framework.dSYM; sourceTree = "<group>"; };
-		D2B673A023D45CDD00BE4E87 /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Command.framework; path = Carthage/Build/iOS/Command.framework; sourceTree = "<group>"; };
-		D2B673A523D45CFA00BE4E87 /* Command.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Command.framework.dSYM; path = Carthage/Build/iOS/Command.framework.dSYM; sourceTree = "<group>"; };
 		FE23057D20CFF0E5000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE23058620CFF0E5000E4355 /* UnicoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2305D220CFF189000E4355 /* Unicore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B6738B23D45BDA00BE4E87 /* Command.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B6739323D45C2C00BE4E87 /* Command.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B6739A23D45C8400BE4E87 /* Command.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +191,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B673A123D45CDD00BE4E87 /* Command.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,8 +200,10 @@
 		D2B6737123D45AD400BE4E87 /* Unicore */ = {
 			isa = PBXGroup;
 			children = (
+				D22496B223DC258A003985F7 /* Command.swift */,
 				D2B6737223D45AD400BE4E87 /* Core.swift */,
 				D2B6737323D45AD400BE4E87 /* Disposer.swift */,
+				D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */,
 			);
 			name = Unicore;
 			path = Sources/Unicore;
@@ -252,8 +212,8 @@
 		D2B6737C23D45AE300BE4E87 /* UnicoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				D2B6737D23D45AE300BE4E87 /* AtomicValue.swift */,
 				D2B6737E23D45AE300BE4E87 /* DisposerTests.swift */,
+				D22496B723DC2596003985F7 /* CommandTests.swift */,
 				D2B6737F23D45AE300BE4E87 /* CoreBasicTests.swift */,
 			);
 			name = UnicoreTests;
@@ -263,23 +223,8 @@
 		D2B6738923D45BDA00BE4E87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2B673A023D45CDD00BE4E87 /* Command.framework */,
-				D2B6739923D45C8400BE4E87 /* Command.framework */,
-				D2B6739223D45C2C00BE4E87 /* Command.framework */,
-				D2B6738A23D45BDA00BE4E87 /* Command.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D2B6739123D45C0400BE4E87 /* dSYMs */ = {
-			isa = PBXGroup;
-			children = (
-				D2B673A523D45CFA00BE4E87 /* Command.framework.dSYM */,
-				D2B6739E23D45C9D00BE4E87 /* Command.framework.dSYM */,
-				D2B6739723D45C5000BE4E87 /* Command.framework.dSYM */,
-				D2B6738F23D45BFA00BE4E87 /* Command.framework.dSYM */,
-			);
-			name = dSYMs;
 			sourceTree = "<group>";
 		};
 		FE23057320CFF0E5000E4355 = {
@@ -288,7 +233,6 @@
 				D2B6737123D45AD400BE4E87 /* Unicore */,
 				D2B6737C23D45AE300BE4E87 /* UnicoreTests */,
 				FE23057E20CFF0E5000E4355 /* Products */,
-				D2B6739123D45C0400BE4E87 /* dSYMs */,
 				D2B6738923D45BDA00BE4E87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -350,7 +294,6 @@
 				FE23057A20CFF0E5000E4355 /* Headers */,
 				FE23057B20CFF0E5000E4355 /* Resources */,
 				D2B6738D23D45BDA00BE4E87 /* Embed Frameworks */,
-				D2B6738E23D45BE000BE4E87 /* dSYM */,
 			);
 			buildRules = (
 			);
@@ -464,7 +407,6 @@
 				FED3CF5520D0477E00AB04C8 /* Headers */,
 				FED3CF5620D0477E00AB04C8 /* Resources */,
 				D2B673A323D45CDD00BE4E87 /* Embed Frameworks */,
-				D2B673A423D45CE700BE4E87 /* dSYM */,
 			);
 			buildRules = (
 			);
@@ -598,6 +540,8 @@
 			files = (
 				D2B6737823D45AD400BE4E87 /* Disposer.swift in Sources */,
 				D2B6737423D45AD400BE4E87 /* Core.swift in Sources */,
+				D22496BB23DC26C9003985F7 /* AtomicValue.swift in Sources */,
+				D22496B323DC258A003985F7 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +551,7 @@
 			files = (
 				D2B6738623D45AE300BE4E87 /* CoreBasicTests.swift in Sources */,
 				D2B6738323D45AE300BE4E87 /* DisposerTests.swift in Sources */,
-				D2B6738023D45AE300BE4E87 /* AtomicValue.swift in Sources */,
+				D22496B823DC2596003985F7 /* CommandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +561,8 @@
 			files = (
 				D2B6737923D45AD400BE4E87 /* Disposer.swift in Sources */,
 				D2B6737523D45AD400BE4E87 /* Core.swift in Sources */,
+				D22496BC23DC26CB003985F7 /* AtomicValue.swift in Sources */,
+				D22496B423DC258A003985F7 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +572,8 @@
 			files = (
 				D2B6737A23D45AD400BE4E87 /* Disposer.swift in Sources */,
 				D2B6737623D45AD400BE4E87 /* Core.swift in Sources */,
+				D22496BD23DC26CB003985F7 /* AtomicValue.swift in Sources */,
+				D22496B523DC258A003985F7 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,7 +583,7 @@
 			files = (
 				D2B6738723D45AE300BE4E87 /* CoreBasicTests.swift in Sources */,
 				D2B6738423D45AE300BE4E87 /* DisposerTests.swift in Sources */,
-				D2B6738123D45AE300BE4E87 /* AtomicValue.swift in Sources */,
+				D22496B923DC2596003985F7 /* CommandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +593,7 @@
 			files = (
 				D2B6738823D45AE300BE4E87 /* CoreBasicTests.swift in Sources */,
 				D2B6738523D45AE300BE4E87 /* DisposerTests.swift in Sources */,
-				D2B6738223D45AE300BE4E87 /* AtomicValue.swift in Sources */,
+				D22496BA23DC2596003985F7 /* CommandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +603,8 @@
 			files = (
 				D2B6737B23D45AD400BE4E87 /* Disposer.swift in Sources */,
 				D2B6737723D45AD400BE4E87 /* Core.swift in Sources */,
+				D22496BE23DC26CC003985F7 /* AtomicValue.swift in Sources */,
+				D22496B623DC258A003985F7 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
