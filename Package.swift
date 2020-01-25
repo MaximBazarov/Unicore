@@ -11,13 +11,11 @@ let package = Package(
             targets: ["Unicore"]),
     ],
     dependencies: [        
-        .package(url: "https://github.com/Unicore/Command.git", from: "1.5.2"),
     ],
     targets: [
         .target(
             name: "Unicore",
             dependencies: [
-                "Command",
             ]),
         .testTarget(
             name: "UnicoreTests",
