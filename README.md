@@ -12,11 +12,11 @@
 iOS: 9.0 + | macOS: 10.10 + | watchOS 2.0 + | tvOS: 9.0 +
 ___
 
-The Unicore is a highly scalable **application design approach** (architecture) which lets you increase the maintainability of an application, increase testability, and give your team the flexibility by decoupling code of an application.
+The Unicore is a highly scalable **application design approach** (architecture) which lets you increase the maintainability of an application, increase testability, and give your team flexibility by decoupling the code of the application.
 
-It is a convenient combination of the **data-driven components** and a **unidirectional dataflow**. 
+It is a convenient combination of **data-driven components** and **unidirectional dataflow**. 
 
-**The framework itself provides you the convenient way to manage an app state. It's `Core` on the picture below.**
+**The framework itself provides you a convenient way to manage an app state. It's `Core` on the picture below.**
 
 ![Unicore](Docs/img/unicore-minimal.png)
 
@@ -57,7 +57,7 @@ Let's imagine a simple app where we need to show the counter and increase/decrea
 So, in that case, the `AppState` would be our only source of the current app state, we look into the instance of the `AppState`  and we have the right values we need to display.
 That's what is **single source of truth**.
 
-But the problem here would be to give access to that state for each part of the app, screens, services, etc. and more importantly provide them with a way to mutate this state, so everybody knows that it was changed. The `Observer` pattern would solve these problems, but to make changes, we need some external ways not only internal as they usually are in the observer.
+But the problem here would be to give access to that state for each part of the app, screens, services, etc., and more importantly provide them with a way to mutate this state, so everybody knows that it was changed. The `Observer` pattern would solve these problems, but to make changes, we need some external ways not only internal as they usually are in the observer.
 
 That's why we use the `Event Bus` pattern to solve this, and we dispatch actions to the [Core](#core) which would mutate the state.
 
