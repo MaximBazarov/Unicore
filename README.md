@@ -1,4 +1,14 @@
 
+
+# Project Archived
+After a production test, this approach proven to be a considerable performance and complexity increase.
+While is better than many other approaches, I don't think it's a good idea for developing apps in swift.
+
+Hence this project is closed in favor of [Decide](https://github.com/MaximBazarov/Decide)
+the better approach performance and complexity wise.
+
+___
+
 [![Build Status](https://travis-ci.org/Unicore/Unicore.svg?branch=master)](https://travis-ci.org/Unicore/Unicore)
 [![Cocoapods](https://img.shields.io/cocoapods/v/Unicore.svg?style=flat)](https://cocoapods.org/pods/Unicore)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -7,6 +17,7 @@
 
 <img src="Docs/img/unicore-logo-light.svg" alt="Unicore" height="30"> The Unicore
 ======================================
+
 [Architecture](#Architecture) | [Installation](#installation) | [Framework API](#api-and-usage) | [FAQ](#faq) | [Examples](#examples) | [Credits](#credits)
 
 iOS: 9.0 + | macOS: 10.10 + | watchOS 2.0 + | tvOS: 9.0 +
